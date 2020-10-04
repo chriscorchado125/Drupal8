@@ -1,0 +1,16 @@
+name: ChrisCorchado
+type: theme
+description: Theme for www.chriscorchado.com/drupal8
+core: 8.x
+screenshot: chriscorchado_home.png
+logo: chriscorchado-initials-logo.png
+
+regions:
+  header: Header
+  content: Content
+  footer: Footer
+  page_top: Page top
+  page_bottom: Page bottom
+
+libraries:
+  - chriscorchado/global-css

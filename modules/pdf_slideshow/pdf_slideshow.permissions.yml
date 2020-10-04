@@ -1,0 +1,3 @@
+administer pdf slideshow:
+  title: 'Administer PDF Slideshow'
+  restrict access: true

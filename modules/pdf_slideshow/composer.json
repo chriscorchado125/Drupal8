@@ -1,0 +1,18 @@
+{
+  "name": "drupal/pdf_slideshow",
+  "type": "drupal-module",
+  "description": "PDF Slideshow",
+  "keywords": [
+    "Drupal"
+  ],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/pdf_slideshow",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "http://drupal.org/project/issues/pdf_slideshow",
+    "source": "http://cgit.drupalcode.org/pdf_slideshow"
+  },
+  "require": {
+    "ext-imagick": "*"
+  }
+}

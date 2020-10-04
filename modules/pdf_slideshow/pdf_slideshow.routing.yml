@@ -1,0 +1,20 @@
+pdf_slideshow.controller.ajax_render:
+  path: '/slideshow/render/{pdfFileIds}/{width}/{height}/{limit}'
+  defaults:
+    _controller: pdf_slideshow.controller.ajax_image_generate_controller:ajaxRender
+  requirements:
+    _permission: 'access content'
+pdf_slideshow.list_controller_list:
+  path: '/admin/pdf-slideshow/list'
+  defaults:
+    _controller: pdf_slideshow.controller.list_controller:list
+    _title: 'PDF Slideshow'
+  requirements:
+    _permission: 'administer pdf slideshow'
+pdf_slideshow.list_controller_delete:
+  path: '/admin/pdf-slideshow/delete'
+  defaults:
+    _controller: pdf_slideshow.controller.list_controller:delete
+    _title: 'PDF Slideshow'
+  requirements:
+    _permission: 'administer pdf slideshow'

@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * @file
+ * Contains pdf_slideshow.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function pdf_slideshow_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the pdf_slideshow module.
+    case 'help.page.pdf_slideshow':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('PDF Slideshow') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function pdf_slideshow_theme($existing, $type, $theme, $path) {
+  return [
+    'pdf_slideshow' => [
+      'variables' => ['slides' => NULL],
+    ],
+    'pdf_slideshow_container' => [
+      'variables' => [
+        'fids' => NULL,
+        'width' => NULL,
+        'height' => NULL,
+        'nbpages' => NULL,
+      ],
+    ],
+    'pdf_list' => [
+      'variables' => ['items' => NULL],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_file_download().
+ */
+function pdf_slideshow_file_download($uri) {
+  $files = Drupal::entityTypeManager()->getStorage('file')->loadByProperties(['uri' => file_create_url($uri)]);
+  if (!empty($files)) {
+    $fileEntity = Drupal::service('pdf_slideshow.manager.image')->getFileById(reset($files)->id());
+    if (!empty($fileEntity) && Drupal::currentUser()->isAuthenticated()) {
+      return file_get_content_headers(reset($files));
+    }
+  }
+}

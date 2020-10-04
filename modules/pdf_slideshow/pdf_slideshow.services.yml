@@ -1,0 +1,13 @@
+services:
+  #Contollers
+  pdf_slideshow.controller.ajax_image_generate_controller:
+    class: Drupal\pdf_slideshow\Controller\AjaxImageGenerateController
+    autowire: TRUE
+  pdf_slideshow.controller.list_controller:
+    class: Drupal\pdf_slideshow\Controller\ListController
+    autowire: TRUE
+
+  #Managers:
+  pdf_slideshow.manager.image:
+    class: Drupal\pdf_slideshow\Manager\PdfSlideshowImageManager
+    autowire: TRUE

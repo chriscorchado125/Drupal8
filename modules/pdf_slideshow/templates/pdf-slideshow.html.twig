@@ -1,0 +1,7 @@
+{% for slide in slides %}
+  <div class="single-item">
+    {% for url in slide %}
+      <div class="img"><img src="{{ url }}" alt=""></div>
+    {% endfor %}
+  </div>
+{% endfor %}
