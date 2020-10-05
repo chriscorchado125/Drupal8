@@ -3,5 +3,8 @@ global-css:
   css:
     theme:
       https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css: {}
-      css/chriscorchado.css: {}
       css/variables.css: {}
+      css/chriscorchado.css: {}
+      css/header/navigation.css: {}
+      css/header/pagination.css: {}
+      css/drupal8.css: {}
