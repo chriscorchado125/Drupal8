@@ -9,6 +9,3 @@ global-css:
       css/header/pagination.css: {}
       css/drupal8.css: {}
       css/pages/company.css: {}
-  js:
-    js/getMonthYear.js: {}
-
