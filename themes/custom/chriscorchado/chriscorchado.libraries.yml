@@ -10,6 +10,5 @@ global-css:
       css/drupal8.css: {}
       css/pages/company.css: {}
   js:
-    theme:
-      js/getMonthYear.js: {}
+    js/getMonthYear.js: {}
 
