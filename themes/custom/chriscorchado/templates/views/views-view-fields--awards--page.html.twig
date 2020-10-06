@@ -52,7 +52,7 @@
           <span class="course-date">{{ field.content }}</span>
         {%- endif -%}
 
-        {%- if field.label == "Track Image" -%}
+        {%- if field.label == "Track Image" and field.content -%}
           <span class="course-links">
             <a href="{{ file_url(field.content) }}" target="_blank" tabindex="32" data-featherlight="image">
               <img loading="lazy" src="https://chriscorchado.com/images/linkedIn-track.png" title="View the Courses in the Track" alt="Trophy Icon" height="25">
