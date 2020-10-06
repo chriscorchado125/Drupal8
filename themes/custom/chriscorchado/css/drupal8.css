@@ -1,3 +1,6 @@
+.layout-container {
+  margin-top: 70px; }
+
 #block-chriscorchado-branding {
   width: 65px; }
 
@@ -5,6 +8,7 @@
   background-color: #f8f9fa; }
 
 .page-title-container {
-  text-align: center; }
+  text-align: center;
+  margin-top: 20px; }
 
 /*# sourceMappingURL=drupal8.css.map */

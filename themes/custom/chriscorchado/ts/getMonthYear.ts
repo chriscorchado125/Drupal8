@@ -3,7 +3,7 @@
  * @param {string} dateString - date value
  * @return {string} - month and year - example: January 2020
  */
-const getMonthYear = (dateString: string) => {
+export const getMonthYear = (dateString: string) => {
   let newDate = new Date(dateString);
 
   return (
@@ -13,4 +13,3 @@ const getMonthYear = (dateString: string) => {
   );
 };
 
-module.exports = getMonthYear;
