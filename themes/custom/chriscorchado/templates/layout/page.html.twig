@@ -43,11 +43,12 @@
  * @see html.html.twig
  */
 #}
-<div class="layout-container">
 
-	<header role="banner">
-		{{ page.header }}
-	</header>
+<header role="banner" id="navigation">
+	{{ page.header }}
+</header>
+
+<div class="layout-container">
 
 	{{ page.primary_menu }}
 	{{ page.secondary_menu }}
@@ -58,7 +59,7 @@
 
 	{{ page.help }}
 
-	<main role="main">
+	<main role="main" class="container">
 		<a id="main-content" tabindex="-1"></a>
 		{# link is in html.html.twig #}
 
@@ -82,9 +83,9 @@
 	</main>
 
 
-	<footer role="contentinfo" id="footer">
-		{% include '@chriscorchado/layout/includes/footer.html.twig' %}
-	</footer>
-
 </div>
+<footer role="contentinfo" id="footer">
+	{% include '@chriscorchado/layout/includes/footer.html.twig' %}
+</footer>
+
 {# /.layout-container #}

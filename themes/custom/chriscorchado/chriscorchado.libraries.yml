@@ -8,3 +8,8 @@ global-css:
       css/header/navigation.css: {}
       css/header/pagination.css: {}
       css/drupal8.css: {}
+      css/pages/company.css: {}
+  js:
+    theme:
+      js/getMonthYear.js: {}
+

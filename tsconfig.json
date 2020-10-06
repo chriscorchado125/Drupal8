@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "ESNext",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "outDir": "./themes/custom/chriscorchado/js",
+    "rootDir": "./themes/custom/chriscorchado/ts",
+    "moduleResolution": "node"
+  },
+  "include": ["./themes/custom/chriscorchado/ts/**/*"]
+}

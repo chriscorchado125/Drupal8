@@ -10,4 +10,9 @@
  * @see template_preprocess_image()
  */
 #}
-<img{{ attributes }} />
+
+{% if 'company-screenshot' in attributes.src|render|render %}
+  <img loading="lazy" src="{{attributes.src}}" class="company-screenshot" alt="{{attributes.alt}}" title="{{attributes.alt}}" />
+{% endif %}
+
+{# <img{{ attributes }} />  {{ attributes.src }} #}

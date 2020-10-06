@@ -48,4 +48,5 @@
 /update.php
 /web.config
 
+.sass-cache
 *.sql
