@@ -1,5 +1,4 @@
 global-css:
-  version: VERSION
   css:
     theme:
       https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css: {}
@@ -8,4 +7,28 @@ global-css:
       css/header/navigation.css: {}
       css/header/pagination.css: {}
       css/drupal8.css: {}
+
+home-css:
+  css:
+    theme:
+      css/pages/home.css: {}
+
+company-css:
+  css:
+    theme:
       css/pages/company.css: {}
+
+course-css:
+  css:
+    theme:
+      css/pages/course.css: {}
+
+project-css:
+  css:
+    theme:
+      css/pages/project.css: {}
+
+contact-css:
+  css:
+    theme:
+      css/pages/contact.css: {}
