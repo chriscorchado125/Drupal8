@@ -3,7 +3,7 @@
  * @param {string} dateString - date value
  * @return {string} - month and year - example: January 2020
  */
-export const getMonthYear = (dateString: string) => {
+function getMonthYear(dateString: string){
   let newDate = new Date(dateString);
 
   return (
@@ -12,4 +12,5 @@ export const getMonthYear = (dateString: string) => {
     newDate.getFullYear().toString()
   );
 };
+
 

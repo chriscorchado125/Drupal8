@@ -1,6 +1,7 @@
-export const getMonthYear = (dateString) => {
+function getMonthYear(dateString) {
     let newDate = new Date(dateString);
     return (newDate.toLocaleString('default', { month: 'long' }) +
         ' ' +
         newDate.getFullYear().toString());
-};
+}
+;
