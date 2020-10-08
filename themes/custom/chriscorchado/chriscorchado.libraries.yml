@@ -32,3 +32,8 @@ contact-css:
   css:
     theme:
       css/pages/contact.css: {}
+
+profile-css:
+  css:
+    theme:
+      css/header/profile.css: {}
