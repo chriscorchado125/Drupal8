@@ -86,7 +86,7 @@ html {
   overflow-y: scroll; }
 
 body {
-  padding: 0;
+  padding: 0px !important;
   margin: 0;
   box-sizing: border-box;
   scrollbar-color: #7399ea #e2eafb;
