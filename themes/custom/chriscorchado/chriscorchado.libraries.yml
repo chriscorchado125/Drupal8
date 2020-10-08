@@ -22,11 +22,23 @@ course-css:
   css:
     theme:
       css/pages/course.css: {}
+      //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css: {}
+      //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.gallery.min.css: {}
+  js:
+    //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js: {}
+    //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.gallery.min.js: {}
+    //cdnjs.cloudflare.com/ajax/libs/detect_swipe/2.1.1/jquery.detect_swipe.min.js: {}
 
 project-css:
   css:
     theme:
       css/pages/project.css: {}
+      //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css: {}
+      //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.gallery.min.css: {}
+  js:
+    //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js: {}
+    //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.gallery.min.js: {}
+    //cdnjs.cloudflare.com/ajax/libs/detect_swipe/2.1.1/jquery.detect_swipe.min.js: {}
 
 contact-css:
   css:
