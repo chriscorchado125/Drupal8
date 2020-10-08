@@ -6,7 +6,7 @@
 */
 function chriscorchado_preprocess_html(&$variables)
 {
-  $path = $current_path = \Drupal::service('path.current')->getPath();
+  $path = \Drupal::service('path.current')->getPath();
 
   switch ($path) {
     case '/courses':
