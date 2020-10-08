@@ -39,11 +39,11 @@
 	{%- endif -%}
 
 	{%- if field.label == "Company" -%}
-		{% set comapany = field.content %}
+		{% set company = field.content %}
 	{%- endif -%}
 
 	{%- if field.label == "Date" -%}
-		<div class="project-company">{{ comapany }}
+		<div class="project-company">{{ company }}
 			(<span class="project-date">{{ field.content }}</span>)</div>
 	{%- endif -%}
 
