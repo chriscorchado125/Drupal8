@@ -2,7 +2,7 @@
   margin-top: 100px; }
 
 #contact-message-feedback-form {
-  margin: auto;
+  margin: 30px auto;
   background-color: #e2eafb;
   padding: 10px 10px 30px 10px;
   text-align: center !important;
@@ -19,10 +19,12 @@
   #contact-message-feedback-form .form-text {
     display: inline !important; }
   #contact-message-feedback-form #edit-name {
-    max-width: 220px; }
+    max-width: 220px;
+    margin-bottom: 30px; }
   #contact-message-feedback-form #edit-mail {
     max-width: 220px;
-    margin-bottom: 50px; }
+    margin-bottom: 40px !important;
+    margin: auto; }
   #contact-message-feedback-form #edit-subject-0-value {
     max-width: 90%; }
   #contact-message-feedback-form #edit-message-0-value {

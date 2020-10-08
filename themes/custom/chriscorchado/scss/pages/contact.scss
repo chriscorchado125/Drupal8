@@ -5,7 +5,7 @@
 }
 
 #contact-message-feedback-form {
-  margin: auto;
+  margin: 30px auto;
   background-color: $main_color_light;
   padding: 10px 10px 30px 10px;
   text-align: center !important;
@@ -32,11 +32,13 @@
 
   #edit-name {
     max-width: 220px;
+    margin-bottom: 30px;
   }
 
   #edit-mail {
     max-width: 220px;
-    margin-bottom: 50px;
+    margin-bottom: 40px !important;
+    margin: auto;
   }
 
   #edit-subject-0-value {
