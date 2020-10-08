@@ -35,6 +35,7 @@
 
 	{%- if field.label == "Title" -%}
 		<div class="project-title">{{ field.content }}</div>
+    {% set title = field.content %}
 	{%- endif -%}
 
 	{%- if field.label == "Company" -%}
@@ -68,6 +69,14 @@
       {{ field.content }}
     </section>
 
+	{%- endif -%}
+
+  {%- if field.label == "Video URL" and field.content -%}
+    <span title="Play Video">
+      <a class="play-video" href="https://chriscorchado.com/video.html?url={{ field.content }}&amp;name={{ title }}" target="_blank">Play Video
+        <img loading="lazy" src="https://chriscorchado.com/images/play_video_new_window_icon.png" alt="Play Video Icon" width="20">
+      </a>
+    </span>
 	{%- endif -%}
 
 	{%- if field.label == "Technology" -%}
