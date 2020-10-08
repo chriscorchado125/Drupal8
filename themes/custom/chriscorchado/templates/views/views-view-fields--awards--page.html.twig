@@ -35,40 +35,40 @@
 
   {% for field in fields -%}
 
-			{%- if field.label == "Title" -%}
-				<h2>{{ field.content }}</h2>
-        {% set title = field.content %}
-			{%- endif -%}
+    {%- if field.label == "Title" -%}
+      <h2>{{ field.content }}</h2>
+      {% set title = field.content %}
+    {%- endif -%}
 
-      {%- if field.label == "Image" -%}
-        <div>
-          <img loading="lazy" src="{{ file_url(field.content) }}" alt="{{ title }}" title="{{ title }}" />
-        </div>
-			{%- endif -%}
-
-      <div class="course-wrapper">
-
-        {%- if field.label == "Date Issued" -%}
-          <span class="course-date">{{ field.content }}</span>
-        {%- endif -%}
-
-        {%- if field.label == "Track Image" and field.content -%}
-          <span class="course-links">
-            <a href="{{ file_url(field.content) }}" target="_blank" tabindex="32" data-featherlight="image">
-              <img loading="lazy" src="https://chriscorchado.com/images/linkedIn-track.png" title="View the Courses in the Track" alt="Trophy Icon" height="25">
-            </a>
-          </span>
-        {%- endif -%}
-
-        {%- if field.label == "PDF" -%}
-          <span class="course-links">
-            <a href="{{ file_url(field.content) }}" target="_blank">
-              <img loading="lazy" src="https://chriscorchado.com/images/pdfIcon.jpg" title="View the PDF Certificate" alt="PDF Icon" height="25">
-            </a>
-          </span>
-        {%- endif -%}
-
+    {%- if field.label == "Image" -%}
+      <div>
+        <img loading="lazy" src="{{ file_url(field.content) }}" alt="{{ title }}" title="{{ title }}" />
       </div>
+    {%- endif -%}
+
+    {# START WRAPPER: date, trophy and PDF icons #}
+    {%- if field.label == "Date Issued" -%}
+      <div class="course-wrapper">
+        <span class="course-date">{{ field.content }}</span>
+    {%- endif -%}
+
+    {%- if field.label == "Track Image" and field.content -%}
+      <span class="course-links">
+        <a href="{{ file_url(field.content) }}" target="_blank" data-featherlight="image">
+          <img loading="lazy" src="https://chriscorchado.com/images/linkedIn-track.png" title="View the Courses in the Track" alt="Trophy Icon" height="25">
+        </a>
+      </span>
+    {%- endif -%}
+
+    {%- if field.label == "PDF" -%}
+      <span class="course-links">
+        <a href="{{ file_url(field.content) }}" target="_blank">
+          <img loading="lazy" src="https://chriscorchado.com/images/pdfIcon.jpg" title="View the PDF Certificate" alt="PDF Icon" height="25">
+        </a>
+      </span>
+      </div>
+    {%- endif -%}
+    {# END WRAPPER: date, trophy and PDF icons #}
 
   {%- endfor %}
 
