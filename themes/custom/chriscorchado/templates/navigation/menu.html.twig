@@ -37,18 +37,32 @@
 		<div class="navbar-collapse" id="navbarCollapse">
 			<div class="navbar-nav show" id="navbar-nav">
 
-				<a href="{{ path('<front>') }}" rel="home" id="logo">
+        {% set url = url('<current>') %}
+
+        {% set activeHomeLink = '' %}
+
+        {% if 'about' in url|render|render %}
+          {% set activeHomeLink = 'home' %}
+        {% endif %}
+
+				<a href="{{ path('<front>') }}" rel="home" id="logo" class="{{ activeHomeLink }}">
 					<img src="https://chriscorchado.com/images/chriscorchado-initials-logo.png" alt="{{ 'Home'|t }}"/>
 				</a>
 
 				{% if items %}
 					{% for item in items %}
-						<a{{item.attributes}} href="{{item.url}}" class="nav-item nav-link">{{item.title}}</a>
+
+            {% set activeLink = '' %}
+
+            {% if item.url|render|render in url|render|render %}
+              {% set activeLink = 'nav-item-active' %}
+            {% endif %}
+
+						<a{{item.attributes}} href="{{item.url}}" class="nav-item nav-link {{activeLink}}">{{item.title}}</a>
 					{% endfor %}
 				{% endif %}
 			</div>
 
-      {% set url = url('<current>') %}
       {% if 'about' in url|render|render or 'contact' in url|render|render %}
 
         <div id="profiles">
@@ -79,5 +93,5 @@
 
 		</div>
 	</nav>
-
 {% endmacro %}
+q
