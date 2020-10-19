@@ -1,9 +1,8 @@
 #logo {
   margin: 5px 16px 5px 0; }
-
-#logo > img {
-  padding: 5px;
-  height: 58px; }
+  #logo img {
+    padding: 5px;
+    height: 58px; }
 
 #logo > img:hover {
   border: 1px dashed #7399ea; }
@@ -42,10 +41,13 @@
       margin-left: 15px; } }
 @media (max-width: 500px) {
   #logo img {
-    height: 50px; } }
+    height: 48px; }
+
+  .page-title-container {
+    margin-top: 55px !important; } }
 @media (max-width: 400px) {
-  #logo img {
-    margin: 0 0 0 10px; }
+  #logo {
+    margin: 5px 16px 0 10px; }
 
   .navbar {
     padding: 0; }
@@ -53,7 +55,7 @@
       width: 100%;
       margin-left: -7px !important; }
       .navbar .navbar-nav .nav-item {
-        margin-left: -2px;
+        margin: 4px 0 0 -2px;
         font-size: 14px; } }
 
 /*# sourceMappingURL=navigation.css.map */

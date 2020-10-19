@@ -11,7 +11,7 @@
 
 .homepage-wrapper {
   margin-top: -5px;
-  padding: 0 30px;
+  padding: 0 15px;
   max-width: 1130px; }
 
 .container h1 {
@@ -86,7 +86,13 @@
   max-width: 70%;
   min-width: 60px; }
 
+@media (max-width: 1200px) {
+  .homepage-wrapper {
+    padding: 0 30px; } }
 @media (max-width: 990px) {
+  .homepage-wrapper {
+    padding: 0 30px; }
+
   .site-versions {
     grid-template-columns: 1fr 1fr !important;
     font-size: 12px; }
@@ -97,16 +103,18 @@
   .site-versions {
     grid-template-columns: 1fr 1fr; } }
 @media (max-width: 700px) {
+  .page-title-container {
+    margin-top: 66px; }
+
   .homepage-wrapper {
-    padding: 0; }
-
-  p {
-    text-align: left;
-    padding: 0; }
-
-  .container h1 {
-    margin-top: 60px; } }
+    padding: 0 30px; }
+    .homepage-wrapper p {
+      text-align: left;
+      padding: 0; } }
 @media (max-width: 600px) {
+  .container {
+    max-width: 540px; }
+
   .site-versions div {
     padding: 0; }
 
@@ -115,12 +123,12 @@
 
   .here-hand {
     height: 50px; } }
-@media (max-width: 500px) {
-  .container > h1 {
-    margin-top: 130px; } }
 @media (max-width: 400px) {
-  .container > h1 {
-    margin: 105px 0 0 0; } }
+  .page-title-container {
+    margin-top: 31px; }
+
+  .container h1 {
+    margin-bottom: 20px; } }
 #drupal8 a img {
   box-shadow: 5px 5px 15px 2px #888888 !important; }
 
