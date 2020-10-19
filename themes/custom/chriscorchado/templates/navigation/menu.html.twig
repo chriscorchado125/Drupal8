@@ -21,8 +21,8 @@
 {% set url = url('<current>') %}
 
 {% if 'about' in url|render|render %}
-  {{ attach_library('chriscorchado/home-css') }}
-  {{ attach_library('chriscorchado/profile-css') }}
+	{{ attach_library('chriscorchado/home-css') }}
+	{{ attach_library('chriscorchado/profile-css') }}
 {% endif %}
 
 {% import _self as menus %}
@@ -35,15 +35,15 @@
 
 	<nav class="navbar navbar-light bg-light fixed-top navbar-fixed-top shadow">
 		<div class="navbar-collapse" id="navbarCollapse">
-			<div class="navbar-nav show" id="navbar-nav">
+			<div class="navbar-nav show" id="navbar-nav" role="navigation" aria-label="Main">
 
-        {% set url = url('<current>') %}
+				{% set url = url('<current>') %}
 
-        {% set activeHomeLink = '' %}
+				{% set activeHomeLink = '' %}
 
-        {% if 'about' in url|render|render %}
-          {% set activeHomeLink = 'home' %}
-        {% endif %}
+				{% if 'about' in url|render|render %}
+					{% set activeHomeLink = 'home' %}
+				{% endif %}
 
 				<a href="{{ path('<front>') }}" rel="home" id="logo" class="{{ activeHomeLink }}">
 					<img src="https://chriscorchado.com/images/chriscorchado-initials-logo.png" alt="{{ 'Home'|t }}"/>
@@ -52,44 +52,44 @@
 				{% if items %}
 					{% for item in items %}
 
-            {% set activeLink = '' %}
+						{% set activeLink = '' %}
 
-            {% if item.url|render|render in url|render|render %}
-              {% set activeLink = 'nav-item-active' %}
-            {% endif %}
+						{% if item.url|render|render in url|render|render %}
+							{% set activeLink = 'nav-item-active' %}
+						{% endif %}
 
 						<a{{item.attributes}} href="{{item.url}}" class="nav-item nav-link {{activeLink}}">{{item.title}}</a>
 					{% endfor %}
 				{% endif %}
 			</div>
 
-      {% if 'about' in url|render|render or 'contact' in url|render|render %}
+			{% if 'about' in url|render|render or 'contact' in url|render|render %}
 
-        <div id="profiles">
+				<div id="profiles">
 
-          <div class="icon" id="pdf-resume">
-            <a href="https://chriscorchado.com/resume/Chris-Corchado-resume-2020.pdf" target="_blank" tabindex="7">
-              <img alt="Link to PDF Resume" src="https://chriscorchado.com/images/pdfIcon.jpg" title="Link to PDF Resume">
-              <span>Resume</span>
-            </a>
-          </div>
+					<div class="icon" id="pdf-resume">
+						<a href="https://chriscorchado.com/resume/Chris-Corchado-resume-2020.pdf" target="_blank" tabindex="7">
+							<img alt="Link to PDF Resume" src="https://chriscorchado.com/images/pdfIcon.jpg" title="Link to PDF Resume">
+							<span>Resume</span>
+						</a>
+					</div>
 
-          <div class="icon" id="profile-linkedin">
-            <a href="https://www.linkedin.com/in/chriscorchado/" target="_blank" tabindex="8">
-              <img alt="Link to LinkedIn Profile" title="Link to LinkedIn Profile" src="https://chriscorchado.com/images/linkedInIcon.jpg">
-              <span>LinkedIn</span>
-            </a>
-          </div>
+					<div class="icon" id="profile-linkedin">
+						<a href="https://www.linkedin.com/in/chriscorchado/" target="_blank" tabindex="8">
+							<img alt="Link to LinkedIn Profile" title="Link to LinkedIn Profile" src="https://chriscorchado.com/images/linkedInIcon.jpg">
+							<span>LinkedIn</span>
+						</a>
+					</div>
 
-          <div class="icon" id="profile-azure">
-            <a href="https://docs.microsoft.com/en-us/users/corchadochrisit-2736/" target="_blank" tabindex="9">
-              <img alt="Link to Azure Profile" title="Link to Azure Profile" src="https://chriscorchado.com/images/azureIcon.png">
-              <span>Azure</span>
-            </a>
-          </div>
+					<div class="icon" id="profile-azure">
+						<a href="https://docs.microsoft.com/en-us/users/corchadochrisit-2736/" target="_blank" tabindex="9">
+							<img alt="Link to Azure Profile" title="Link to Azure Profile" src="https://chriscorchado.com/images/azureIcon.png">
+							<span>Azure</span>
+						</a>
+					</div>
 
-        </div>
-      {% endif %}
+				</div>
+			{% endif %}
 
 		</div>
 	</nav>
