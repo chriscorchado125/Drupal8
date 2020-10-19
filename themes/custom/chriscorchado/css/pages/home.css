@@ -1,17 +1,22 @@
 .home {
   border: 1px dashed #7399ea; }
 
+.page-title-container {
+  margin: 26px 0 0 0; }
+
 .home-hrclass {
   margin-top: 15px;
   background-color: black;
   height: 2px; }
 
 .homepage-wrapper {
-  padding: 0 40px; }
+  margin-top: -5px;
+  padding: 0 30px;
+  max-width: 1130px; }
 
 .container h1 {
   text-align: center;
-  margin-bottom: 30px; }
+  margin-bottom: 28px; }
 .container .about-headline {
   text-align: center; }
 .container h2 {
