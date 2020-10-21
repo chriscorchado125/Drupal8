@@ -28,6 +28,7 @@ course-css:
     //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js: {}
     //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.gallery.min.js: {}
     //cdnjs.cloudflare.com/ajax/libs/detect_swipe/2.1.1/jquery.detect_swipe.min.js: {}
+    js/lightboxConfig.js: {}
 
 project-css:
   css:
@@ -39,6 +40,7 @@ project-css:
     //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js: {}
     //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.gallery.min.js: {}
     //cdnjs.cloudflare.com/ajax/libs/detect_swipe/2.1.1/jquery.detect_swipe.min.js: {}
+    js/lightboxConfig.js: {}
 
 contact-css:
   css:
