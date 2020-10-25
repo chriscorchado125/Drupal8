@@ -5,7 +5,6 @@ global-css:
       css/variables.css: {}
       css/chriscorchado.css: {}
       css/header/navigation.css: {}
-      css/header/pagination.css: {}
       css/drupal8.css: {}
 
 home-css:
@@ -21,6 +20,7 @@ company-css:
 course-css:
   css:
     theme:
+      css/header/pagination.css: {}
       css/pages/course.css: {}
       //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css: {}
       //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.gallery.min.css: {}
@@ -33,6 +33,7 @@ course-css:
 project-css:
   css:
     theme:
+      css/header/pagination.css: {}
       css/pages/project.css: {}
       //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css: {}
       //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.gallery.min.css: {}
