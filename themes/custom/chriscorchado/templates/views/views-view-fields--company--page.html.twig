@@ -57,6 +57,8 @@
     {% set endDate = field.content %}
   {%- endif -%}
 
-  <div class="employment-dates">{{ startDate }} -	{{ endDate }}</div>
+  {%- if startDate and endDate -%}
+    <div class="employment-dates">{{ startDate }} -	{{ endDate }}</div>
+  {%- endif -%}
 
 {%- endfor %}
