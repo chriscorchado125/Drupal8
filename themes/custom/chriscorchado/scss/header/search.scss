@@ -4,8 +4,12 @@
   float: right;
   margin: -65px 0 0 0;
   padding: 0px;
-  width: 300px;
+  width: 305px;
   text-align: center;
+
+  label{
+    margin-bottom: 0;
+  }
 
   #searchCount {
     font-size: 12px;
@@ -27,9 +31,10 @@
 
   /* search button */
   .searchBtn {
-    padding: 2px;
+    padding: 4px;
     font-size: 12px;
     margin-left: 3px;
+    display: none;
   }
 
   .searchBtn:hover {
@@ -37,6 +42,11 @@
     box-shadow: 0 0 #fff;
     background-color: $main_color;
   }
+
+  .ccBtn{
+    display: inline-block;
+  }
+
 } // #search-container
 
 @media (max-width: 700px) {
