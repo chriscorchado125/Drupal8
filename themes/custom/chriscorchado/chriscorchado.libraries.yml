@@ -16,12 +16,16 @@ company-css:
   css:
     theme:
       css/pages/company.css: {}
+      css/header/search.css: {}
+      css/header/pagination.css: {}
 
 course-css:
   css:
     theme:
-      css/header/pagination.css: {}
       css/pages/course.css: {}
+      css/header/search.css: {}
+      css/header/pagination.css: {}
+
       //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css: {}
       //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.gallery.min.css: {}
   js:
@@ -33,8 +37,10 @@ course-css:
 project-css:
   css:
     theme:
-      css/header/pagination.css: {}
       css/pages/project.css: {}
+      css/header/search.css: {}
+      css/header/pagination.css: {}
+
       //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css: {}
       //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.gallery.min.css: {}
   js:
