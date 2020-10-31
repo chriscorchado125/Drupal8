@@ -15,6 +15,7 @@
  * @see template_preprocess_views_view_unformatted()
  */
 #}
+
 {% if title %}
 	<h3>{{ title }}</h3>
 {% endif %}
@@ -27,10 +28,10 @@
 
 	{%
     set row_classes = [
-      default_row_class ? 'views-row',
+      default_row_class ? 'views-row company-container col shadow',
     ]
   %}
-	<div{{row.attributes.addClass(row_classes)}} class="company-container col shadow">
+	<div{{row.attributes.addClass(row_classes)}}>
 		{{- row.content -}}
 	</div>
 {% endfor %}
