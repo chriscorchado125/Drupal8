@@ -4,10 +4,10 @@
   float: right;
   margin: -65px 0 0 0;
   padding: 0px;
-  width: 305px;
+  width: 355px;
   text-align: center;
 
-  label{
+  label {
     margin-bottom: 0;
   }
 
@@ -34,19 +34,18 @@
     padding: 4px;
     font-size: 12px;
     margin-left: 3px;
-    display: none;
   }
 
   .searchBtn:hover {
     color: #fff;
     box-shadow: 0 0 #fff;
     background-color: $main_color;
+    text-shadow: 1px 1px #000;
   }
 
-  .ccBtn{
+  .ccBtn {
     display: inline-block;
   }
-
 } // #search-container
 
 @media (max-width: 700px) {

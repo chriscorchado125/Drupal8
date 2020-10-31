@@ -6,8 +6,8 @@
 
 #pagination {
   text-align: center;
-  padding-left: 45px;
-  margin-top: 0;
+  padding-left: 5px;
+  margin-top: 5px;
   display: inline-block;
   /* next / prev text */ }
   #pagination a {

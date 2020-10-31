@@ -1,5 +1,9 @@
 @import "./../variables.scss";
 
+#search-container {
+  display: none;
+}
+
 #contact-message-feedback-form {
   margin: 30px auto;
   background-color: $main_color_light;

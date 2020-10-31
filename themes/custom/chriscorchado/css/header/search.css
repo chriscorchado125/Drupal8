@@ -3,11 +3,13 @@
   float: right;
   margin: -65px 0 0 0;
   padding: 0px;
-  width: 300px;
+  width: 355px;
   text-align: center;
   /* search textbox */
   /* remove IE “clear field or cross” X button from inputs field */
   /* search button */ }
+  #search-container label {
+    margin-bottom: 0; }
   #search-container #searchCount {
     font-size: 12px;
     text-align: right;
@@ -19,13 +21,16 @@
   #search-container ::-ms-clear {
     display: none; }
   #search-container .searchBtn {
-    padding: 2px;
+    padding: 4px;
     font-size: 12px;
     margin-left: 3px; }
   #search-container .searchBtn:hover {
     color: #fff;
     box-shadow: 0 0 #fff;
-    background-color: #7399ea; }
+    background-color: #7399ea;
+    text-shadow: 1px 1px #000; }
+  #search-container .ccBtn {
+    display: inline-block; }
 
 @media (max-width: 700px) {
   #search-container {

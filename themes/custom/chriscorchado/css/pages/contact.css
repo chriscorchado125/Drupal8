@@ -1,3 +1,6 @@
+#search-container {
+  display: none; }
+
 #contact-message-feedback-form {
   margin: 30px auto;
   background-color: #e2eafb;

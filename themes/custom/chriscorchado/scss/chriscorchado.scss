@@ -77,6 +77,10 @@ body {
   overflow: hidden;
 }
 
+.hide {
+  display: none;
+}
+
 h1 {
   color: $main_color;
   font-size: 30px;

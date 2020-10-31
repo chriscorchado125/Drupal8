@@ -91,7 +91,32 @@
 				</div>
 			{% endif %}
 
+      {# search form action is set on load #}
+      <form id="search-container" action="" method="get" role="search" class="paginationNo" accept-charset="UTF-8">
+
+        <span id="searchCount" tabindex="9"></span>
+
+        <label>
+          <span class="screen-reader">Enter search term</span>
+          <input type="text" id="searchSite" placeholder="Search items" maxlength="128" name="search_api" class="ccBtn" title="Search" aria-label="Enter search term" tabindex="10">
+
+        </label>
+
+        <label>
+          <span class="screen-reader">Search</span>
+          <input type="submit" id="searchSubmit" aria-label="Search" class="searchBtn" title="Search" value="Search" tabindex="11"/>
+
+        </label>
+
+        <label>
+          <span class="screen-reader">Clear Search</span>
+          <input type="button" id="searchClear" aria-label="Clear Search" class="searchBtn" title="Clear search" value="Clear" tabindex="12"/>
+        </label>
+
+        <div id="pagination"></div>
+
+      </form>
+
 		</div>
 	</nav>
 {% endmacro %}
-q
