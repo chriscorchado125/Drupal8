@@ -1,16 +1,17 @@
-const SEARCH_CONTAINER = document.getElementById("search-container");
-switch (location.pathname.toString()) {
-    case "/companies":
-    case "/company-search":
-        SEARCH_CONTAINER.setAttribute("action", "/company-search");
-        break;
-    case "/courses":
-    case "/course-search":
-        SEARCH_CONTAINER.setAttribute("action", "/course-search");
-        break;
-    case "/projects":
-    case "/project-search":
-        SEARCH_CONTAINER.setAttribute("action", "/project-search");
-        break;
-}
-document.getElementById("searchClear").onclick = () => document.location.search = '';
+const configureSearchForm = () => {
+    let subFolder = "";
+    if (location.pathname.toString().indexOf('/drupal8/') !== -1) {
+        subFolder = "/drupal8";
+    }
+    const SEARCH_CONTAINER = document.getElementById("search-container");
+    if (location.pathname.toString().indexOf("compan") !== -1) {
+        SEARCH_CONTAINER.setAttribute("action", subFolder + "/company-search");
+    }
+    if (location.pathname.toString().indexOf("course") !== -1) {
+        SEARCH_CONTAINER.setAttribute("action", subFolder + "/course-search");
+    }
+    if (location.pathname.toString().indexOf("project") !== -1) {
+        SEARCH_CONTAINER.setAttribute("action", subFolder + "/project-search");
+    }
+    document.getElementById("searchClear").onclick = () => document.location.search = '';
+};

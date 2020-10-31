@@ -18,4 +18,10 @@ window.addEventListener('DOMContentLoaded', () => {
   setPagination(actualPrevLink, actualNextLink);
 
   setItemCounts();
+
+  setTimeout(function(){
+    configureSearchForm();
+  }, 125);
+
 });
+
