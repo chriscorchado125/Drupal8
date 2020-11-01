@@ -24,4 +24,10 @@ const configureSearchForm = () => {
   }
 
   document.getElementById("searchClear").onclick = () => document.location.search = '';
+
+  let params = new URLSearchParams(document.location.search);
+  if(params.get("search_api")){
+    (<HTMLInputElement>document.getElementById("searchSite")).value = params.get("search_api");
+    (<HTMLInputElement>document.getElementById("searchSite")).select();
+  }
 }

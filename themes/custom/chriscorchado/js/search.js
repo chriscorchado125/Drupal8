@@ -14,4 +14,9 @@ const configureSearchForm = () => {
         SEARCH_CONTAINER.setAttribute("action", subFolder + "/project-search");
     }
     document.getElementById("searchClear").onclick = () => document.location.search = '';
+    let params = new URLSearchParams(document.location.search);
+    if (params.get("search_api")) {
+        document.getElementById("searchSite").value = params.get("search_api");
+        document.getElementById("searchSite").select();
+    }
 };
