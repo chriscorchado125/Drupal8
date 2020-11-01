@@ -19,4 +19,9 @@ const configureSearchForm = () => {
         document.getElementById("searchSite").value = params.get("search_api");
         document.getElementById("searchSite").select();
     }
+    else {
+        if (document.location.pathname == "/award-search") {
+            document.getElementById("searchSite").focus();
+        }
+    }
 };

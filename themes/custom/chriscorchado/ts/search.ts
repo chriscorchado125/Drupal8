@@ -25,9 +25,17 @@ const configureSearchForm = () => {
 
   document.getElementById("searchClear").onclick = () => document.location.search = '';
 
+
   let params = new URLSearchParams(document.location.search);
+
+  // if searching then set searched value and select it
   if(params.get("search_api")){
     (<HTMLInputElement>document.getElementById("searchSite")).value = params.get("search_api");
     (<HTMLInputElement>document.getElementById("searchSite")).select();
+  } else {
+    // search was cleared so set focus back to search input
+    if(document.location.pathname == "/award-search"){
+      (<HTMLInputElement>document.getElementById("searchSite")).focus();
+    }
   }
 }
