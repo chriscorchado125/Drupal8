@@ -38,14 +38,24 @@ const setItemCounts = () => {
         document.getElementById("searchCount").innerHTML = `<span id="totalItems">${count}</span> ${count == 1 ? "Item" : "Items"}`;
     }
 };
-const setPagination = (prevURL, nextURL) => {
-    const prevLink = prevURL ?
-        `<a href="${prevURL}" class="pager-navigation" title="View the previous page" tabindex="10" role="button">Prev</a>`
+const setPagination = () => {
+    const DRUPAL_PAGER = document.querySelectorAll("ul.js-pager__items li a");
+    let actualPrevLink = "", actualNextLink = "";
+    for (let i = 0; i < DRUPAL_PAGER.length; i++) {
+        if (DRUPAL_PAGER[i].getAttribute("rel") == "next") {
+            actualNextLink = DRUPAL_PAGER[i].getAttribute("href");
+        }
+        if (DRUPAL_PAGER[i].getAttribute("rel") == "prev") {
+            actualPrevLink = DRUPAL_PAGER[i].getAttribute("href");
+        }
+    }
+    const prevLink = actualPrevLink ?
+        `<a href="${actualPrevLink}" class="pager-navigation" title="View the previous page" tabindex="10" role="button">Prev</a>`
         : `<span class="pager-navigation disabled" title="There is no previous page available" tabindex="11" role="button">Prev</span>`;
-    const nextLink = nextURL ?
-        `<a href="${nextURL}" class="pager-navigation" title="View the next page" tabindex="12" role="button">Next</a>`
+    const nextLink = actualNextLink ?
+        `<a href="${actualNextLink}" class="pager-navigation" title="View the next page" tabindex="12" role="button">Next</a>`
         : `<span class="pager-navigation disabled" title="There is no next page available" tabindex="13" role="button">Next</span>`;
-    if (prevURL.length + nextURL.length) {
+    if (actualPrevLink.length + actualNextLink.length) {
         document.getElementById("pagination").innerHTML = prevLink + nextLink;
     }
     else {
