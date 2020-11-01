@@ -11,4 +11,10 @@
   text-align: center;
   margin-top: 50px; }
 
+.views-element-container header {
+  display: none; }
+
+.views-element-container nav {
+  display: none; }
+
 /*# sourceMappingURL=drupal8.css.map */
