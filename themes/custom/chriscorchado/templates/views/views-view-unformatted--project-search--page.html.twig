@@ -15,6 +15,7 @@
  * @see template_preprocess_views_view_unformatted()
  */
 #}
+
 {% if title %}
 	<h3>{{ title }}</h3>
 {% endif %}
@@ -23,14 +24,14 @@
 
 {% for row in rows %}
 
-	{% set recordTotal = recordTotal + 1 %}
+  {% set recordTotal = recordTotal + 1 %}
 
 	{%
     set row_classes = [
-      default_row_class ? 'views-row',
+      default_row_class ? 'views-row project col',
     ]
   %}
-	<div{{row.attributes.addClass(row_classes)}} class="project col">
+	<div{{row.attributes.addClass(row_classes)}}>
 		{{- row.content -}}
 	</div>
 {% endfor %}
@@ -49,4 +50,3 @@
 <script src="{{ site_url_subFolder }}/themes/custom/chriscorchado/js/itemCount.js"></script>
 <script src="{{ site_url_subFolder }}/themes/custom/chriscorchado/js/search.js"></script>
 <script src="{{ site_url_subFolder }}/themes/custom/chriscorchado/js/pageLoaded.js"></script>
-
