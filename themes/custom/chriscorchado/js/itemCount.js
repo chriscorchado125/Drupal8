@@ -24,11 +24,14 @@ const setItemCounts = () => {
         if (firstRange === 0) {
             firstRange = 1;
         }
+        else {
+            firstRange = firstRange + 1;
+        }
         if (count < MAX_ITEMS_PER_PAGE) {
-            lastRange = firstRange + count;
+            lastRange = (firstRange + count) - 1;
         }
         document.getElementById("search-container").className = "paginationYes";
-        document.getElementById("searchCount").innerHTML = ` Items <span id="totalItems">${firstRange + " - " + lastRange}</span>`;
+        document.getElementById("searchCount").innerHTML = ` Items <span id="totalItems">${firstRange + "-" + lastRange}</span>`;
     }
     else {
         document.getElementById("search-container").className = "paginationNo";
