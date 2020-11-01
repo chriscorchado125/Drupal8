@@ -47,6 +47,7 @@
 {% set site_url = url("<current>") %}
 {% set site_url_subFolder = '' %}
 
+{# Set subfolder for live site #}
 {% if 'drupal8' in site_url|render|render  %}
   {% set site_url_subFolder = "/drupal8"  %}
 {% endif %}

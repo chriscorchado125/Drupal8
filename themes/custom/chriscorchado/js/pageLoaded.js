@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', () => {
+const setupPage = () => {
     const DRUPAL_PAGER = document.querySelectorAll("ul.js-pager__items li a");
     let actualPrevLink = "", actualNextLink = "";
     for (let i = 0; i < DRUPAL_PAGER.length; i++) {
@@ -14,4 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
     setTimeout(function () {
         configureSearchForm();
     }, 125);
+};
+window.addEventListener('DOMContentLoaded', () => {
+    setupPage();
 });
