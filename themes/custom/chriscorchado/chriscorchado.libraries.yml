@@ -6,6 +6,7 @@ global-css:
       css/chriscorchado.css: {}
       css/header/navigation.css: {}
       css/drupal8.css: {}
+      css/animation/preloader.css: {}
 
 home-css:
   css:
