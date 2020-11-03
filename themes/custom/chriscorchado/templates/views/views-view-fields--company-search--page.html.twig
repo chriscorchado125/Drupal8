@@ -31,18 +31,36 @@
 #}
 {{ attach_library('chriscorchado/company-css') }}
 
+{% set site_url = url("<current>") %}
+{% set site_url_subFolder = '' %}
+
+{# Set subfolder for live site - TODO: move highlightSearch.js to libraries.yml #}
+{% if 'drupal8' in site_url|render|render  %}
+  {% set site_url_subFolder = "/drupal8"  %}
+{% endif %}
+
+<script src="{{ site_url_subFolder }}/themes/custom/chriscorchado/js/highlightSearch.js"></script>
+
 {% for field in fields -%}
 
   {%- if field.label == "Company" -%}
-    <div class="company-name">{{ field.content }}</div>
+    <div class="company-name">
+      <script>document.write(highlightSearch("{{ field.content }}",urlParams.get("search_api")))</script>
+    </div>
   {%- endif -%}
 
   {%- if field.label == "Job Title" -%}
-    <div class="company-job-title">{{ field.content }}</div>
+    <div class="company-job-title">
+      <script>document.write(highlightSearch("{{ field.content }}",urlParams.get("search_api")))</script>
+    </div>
   {%- endif -%}
 
   {%- if field.label == "Body" -%}
-    <div class="body-container">{{ field.content }}</div>
+    {# TODO figure out how to handle HTML or use entities #}
+    {# % set bodyHTML = field.content| replace({"\n": "", "\r": "", "\t": ""}) %} #}
+    <div class="body-container">
+      <div style="width:100%;text-align:center;font-style:italic;font-size:11px;margin-bottom:5px;">Highlight Not Currently Working on the Body</div> {{ field.content }}
+    </div>
   {%- endif -%}
 
   {%- if field.label == "Screenshot" -%}
@@ -58,7 +76,10 @@
   {%- endif -%}
 
   {%- if startDate and endDate -%}
-    <div class="employment-dates">{{ startDate }} -	{{ endDate }}</div>
+    <div class="employment-dates">
+      <script>document.write(highlightSearch("{{ startDate }}",urlParams.get("search_api")))</script> -
+      <script>document.write(highlightSearch("{{ endDate }}",urlParams.get("search_api")))</script>
+    </div>
   {%- endif -%}
 
 {%- endfor %}
