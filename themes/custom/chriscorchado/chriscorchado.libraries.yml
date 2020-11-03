@@ -11,6 +11,7 @@ home-css:
   css:
     theme:
       css/pages/home.css: {}
+      css/header/profile.css: {}
 
 company-css:
   css:
@@ -19,6 +20,7 @@ company-css:
       css/header/search.css: {}
       css/header/pagination.css: {}
 
+# TODO replace all featherlight/jquery css/js
 course-css:
   css:
     theme:
@@ -53,8 +55,4 @@ contact-css:
   css:
     theme:
       css/pages/contact.css: {}
-
-profile-css:
-  css:
-    theme:
       css/header/profile.css: {}
