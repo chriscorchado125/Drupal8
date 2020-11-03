@@ -19,6 +19,11 @@ company-css:
       css/pages/company.css: {}
       css/header/search.css: {}
       css/header/pagination.css: {}
+  js:
+    js/itemCount.js: {}
+    js/search.js: {}
+    js/pageLoaded.js: {}
+    js/highlightSearch.js: {}
 
 # TODO replace all featherlight/jquery css/js
 course-css:
@@ -27,7 +32,6 @@ course-css:
       css/pages/course.css: {}
       css/header/search.css: {}
       css/header/pagination.css: {}
-
       //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css: {}
       //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.gallery.min.css: {}
   js:
@@ -36,6 +40,10 @@ course-css:
     //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.gallery.min.js: {}
     //cdnjs.cloudflare.com/ajax/libs/detect_swipe/2.1.1/jquery.detect_swipe.min.js: {}
     js/lightboxConfig.js: {}
+    js/itemCount.js: {}
+    js/search.js: {}
+    js/pageLoaded.js: {}
+    js/highlightSearch.js: {}
 
 project-css:
   css:
@@ -43,7 +51,6 @@ project-css:
       css/pages/project.css: {}
       css/header/search.css: {}
       css/header/pagination.css: {}
-
       //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css: {}
       //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.gallery.min.css: {}
   js:
@@ -52,6 +59,10 @@ project-css:
     //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.gallery.min.js: {}
     //cdnjs.cloudflare.com/ajax/libs/detect_swipe/2.1.1/jquery.detect_swipe.min.js: {}
     js/lightboxConfig.js: {}
+    js/itemCount.js: {}
+    js/search.js: {}
+    js/pageLoaded.js: {}
+    js/highlightSearch.js: {}
 
 contact-css:
   css:

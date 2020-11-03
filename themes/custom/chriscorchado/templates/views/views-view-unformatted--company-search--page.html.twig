@@ -39,14 +39,3 @@
 <div id="record-total" class="hide">
 	{{ recordTotal }}
 </div>
-
-{% set site_url = url("<current>") %}
-{% set site_url_subFolder = '' %}
-
-{% if 'drupal8' in site_url|render|render  %}
-  {% set site_url_subFolder = "/drupal8"  %}
-{% endif %}
-
-<script src="{{ site_url_subFolder }}/themes/custom/chriscorchado/js/itemCount.js"></script>
-<script src="{{ site_url_subFolder }}/themes/custom/chriscorchado/js/search.js"></script>
-<script src="{{ site_url_subFolder }}/themes/custom/chriscorchado/js/pageLoaded.js"></script>
