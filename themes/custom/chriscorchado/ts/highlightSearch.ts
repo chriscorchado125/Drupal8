@@ -1,4 +1,9 @@
 /**
+* Get querystring values
+*/
+const urlParams = new URLSearchParams(window.location.search);
+
+/**
  * Highlight search term within a string
  * @param {string} itemToHighlight - string to search
  * @param {string} searchedFor - string to search for

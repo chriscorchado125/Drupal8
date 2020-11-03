@@ -1,3 +1,4 @@
+const urlParams = new URLSearchParams(window.location.search);
 const highlightSearch = (itemToHighlight, searchedFor) => {
     let dataToReturn = "";
     if (searchedFor) {

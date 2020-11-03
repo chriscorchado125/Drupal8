@@ -21,10 +21,11 @@ company-css:
       css/header/search.css: {}
       css/header/pagination.css: {}
   js:
+    # js/highlightSearch.js: {} TODO remove from template and add here
     js/itemCount.js: {}
     js/search.js: {}
     js/pageLoaded.js: {}
-    js/highlightSearch.js: {}
+
 
 # TODO replace all featherlight/jquery css/js
 course-css:
