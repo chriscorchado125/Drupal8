@@ -4,9 +4,14 @@
 .paginationNo {
   margin: -53px 0 0 0 !important; }
 
+.paginationYes-H1 {
+  margin: 30px 0 20px 0; }
+
+.paginationNo-H1 {
+  margin: 20px 0 20px 0; }
+
 #pagination {
   text-align: center;
-  padding-left: 5px;
   margin-top: 5px;
   display: inline-block;
   /* next / prev text */ }
@@ -32,17 +37,23 @@
   .paginationNo {
     margin: 0 0 0 0 !important; }
 
+  .pager-navigation {
+    margin: 0px 2px;
+    padding: 3px 7px; }
+
   #pagination {
-    padding-left: 30px; } }
+    display: inline; } }
 @media (max-width: 500px) {
-  #pagination {
-    padding-left: 10px; }
-    #pagination .pager-navigation {
-      margin: 0px 2px;
-      padding: 3px 7px; } }
-@media (max-width: 400px) {
-  #pagination {
-    padding-left: 5px;
-    margin-right: 5px; } }
+  .paginationYes-H1 {
+    margin: 120px 0 0 0 !important; }
+
+  .paginationNo-H1 {
+    margin: 120px 0 0 0 !important; } }
+@media (max-width: 460px) {
+  .paginationYes-H1 {
+    padding-top: 5px; }
+
+  .paginationNo-H1 {
+    margin: 120px 0 0 0 !important; } }
 
 /*# sourceMappingURL=pagination.css.map */

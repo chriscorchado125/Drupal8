@@ -2,7 +2,6 @@
 
 #search-container {
   float: right;
-  margin: -65px 0 0 0;
   padding: 0px;
   width: 355px;
   text-align: center;
@@ -33,7 +32,7 @@
   .searchBtn {
     padding: 4px;
     font-size: 12px;
-    margin-left: 3px;
+    margin-left: 0;
   }
 
   .searchBtn:hover {
@@ -41,6 +40,10 @@
     box-shadow: 0 0 #fff;
     background-color: $main_color;
     text-shadow: 1px 1px #000;
+  }
+
+  #searchClear {
+    margin-right: 10px;
   }
 
   .ccBtn {
@@ -57,29 +60,41 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 530px) {
   #search-container {
     #searchSite {
-      width: 105px;
+      width: 125px;
     }
+
     #searchBtn {
       margin-left: 5px;
     }
+
     #searchCount {
       width: 80px;
+      margin-right: 2px;
     }
+  }
+}
+
+@media (max-width: 400px) {
+  #searchSite {
+    margin-bottom: 10px;
   }
 }
 
 @media (max-width: 350px) {
   #search-container {
     #searchSite {
-      width: 95px;
       font-size: 12px;
     }
 
     #searchCount {
       width: 75px;
+    }
+
+    .searchBtn {
+      padding: 1px 4px;
     }
   }
 }

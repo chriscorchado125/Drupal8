@@ -2,7 +2,7 @@
   margin: 5px 16px 5px 0; }
   #logo img {
     padding: 5px;
-    height: 58px; }
+    height: 60px; }
 
 #logo > img:hover {
   border: 1px dashed #7399ea; }
@@ -13,11 +13,11 @@
 
 .navbar {
   border-bottom: 2px solid #7399ea;
-  display: block;
   min-height: 85px;
   /* force nav to stay horizontal */ }
   .navbar .navbar-nav {
     flex-direction: row;
+    max-width: 1100px !important;
     /* align items vertically*/ }
     .navbar .navbar-nav .nav-item {
       display: flex;
@@ -32,30 +32,26 @@
       color: #7399ea !important; }
 
 @media (max-width: 700px) {
-  .navbar-nav {
-    justify-content: space-between;
-    width: 90%; }
-    .navbar-nav .nav-item {
-      justify-content: left;
-      width: 60px;
-      margin-left: 15px; } }
+  .navbar .navbar-nav {
+    justify-content: space-around; } }
 @media (max-width: 500px) {
   #logo img {
-    height: 48px; }
-
-  .page-title-container {
-    margin-top: 55px !important; } }
+    height: 48px; } }
 @media (max-width: 400px) {
   #logo {
-    margin: 5px 16px 0 10px; }
+    margin: 5px 5px 5px 0; }
+
+  #navbarCollapse {
+    max-width: 95%; }
 
   .navbar {
-    padding: 0; }
-    .navbar .navbar-nav {
-      width: 100%;
-      margin-left: -7px !important; }
-      .navbar .navbar-nav .nav-item {
-        margin: 4px 0 0 -2px;
-        font-size: 14px; } }
+    padding: 0 0 10px 0; }
+
+  #navbarCollapse {
+    font-size: 13px;
+    margin: 0 0 0 5px; } }
+@media (max-width: 350px) {
+  #navbarCollapse {
+    max-width: 310px; } }
 
 /*# sourceMappingURL=navigation.css.map */

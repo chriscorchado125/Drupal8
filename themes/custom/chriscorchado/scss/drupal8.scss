@@ -1,9 +1,5 @@
 @import "variables.scss";
 
-.layout-container {
-  margin-top: 50px;
-}
-
 #block-chriscorchado-branding {
   width: 65px;
 }
@@ -12,17 +8,12 @@
   background-color: $off_white;
 }
 
-.page-title-container {
-  text-align: center;
-  margin-top: 50px;
-}
-
-// pagination top
-.views-element-container header{
+// Hide Drupal pagination top
+.views-element-container header {
   display: none;
 }
 
-// pagination bottom
+// Hide Drupal pagination bottom
 .views-element-container nav {
   display: none;
 }
