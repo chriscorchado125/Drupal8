@@ -7,6 +7,8 @@ global-css:
       css/header/navigation.css: {}
       css/drupal8.css: {}
       css/animation/preloader.css: {}
+  js:
+    js/setNavItem.js: {}
 
 home-css:
   css:
