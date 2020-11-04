@@ -57,10 +57,13 @@
   {%- endif -%}
 
   {%- if field.label == "Body" -%}
-    {# TODO figure out how to handle HTML or use entities #}
-    {# % set bodyHTML = field.content| replace({"\n": "", "\r": "", "\t": ""}) %} #}
+
+    {% set bodyHTML = field.content| replace({"\n": "", "\r": "", "\t": ""}) %}
+
     <div class="body-container">
-      <div style="width:100%;text-align:center;font-style:italic;font-size:11px;margin-bottom:5px;">Highlight Not Currently Working on the Body</div> {{ field.content }}
+      <script>
+        document.write(highlightSearch("{{ bodyHTML }}",urlParams.get("search_api")));
+      </script>
     </div>
   {%- endif -%}
 
