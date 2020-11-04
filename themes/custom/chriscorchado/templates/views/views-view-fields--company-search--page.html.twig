@@ -81,8 +81,7 @@
 
   {%- if startDate and endDate -%}
     <div class="employment-dates">
-      <script>document.write(highlightSearch("{{ startDate }}",urlParams.get("search_api")))</script> -
-      <script>document.write(highlightSearch("{{ endDate }}",urlParams.get("search_api")))</script>
+      {{ startDate }} - {{ endDate }}
     </div>
   {%- endif -%}
 
