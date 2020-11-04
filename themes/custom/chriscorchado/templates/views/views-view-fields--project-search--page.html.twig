@@ -31,24 +31,43 @@
 #}
 {{ attach_library('chriscorchado/project-css') }}
 
+{% set site_url = url("<current>") %}
+{% set site_url_subFolder = '' %}
+
+{# TODO: JIRA: D8-23 - move highlightSearch.js to libraries.yml #}
+{% if 'drupal8' in site_url|render|render  %}
+  {% set site_url_subFolder = "/drupal8"  %}
+{% endif %}
+
+<script src="{{ site_url_subFolder }}/themes/custom/chriscorchado/js/highlightSearch.js"></script>
+
 {% for field in fields -%}
 
 	{%- if field.label == "Title" -%}
-		<div class="project-title">{{ field.content }}</div>
+		<div class="project-title">
+      <script>document.write(highlightSearch("{{ field.content }}",urlParams.get("search_api")))</script>
+    </div>
     {% set title = field.content %}
 	{%- endif -%}
 
+  {# TODO: JIRA: D8-24 - also search company #}
 	{%- if field.label == "Company" -%}
 		{% set company = field.content %}
 	{%- endif -%}
 
 	{%- if field.label == "Date" -%}
-		<div class="project-company">{{ company }}
-			(<span class="project-date">{{ field.content }}</span>)</div>
+		<div class="project-company">
+      <script>document.write(highlightSearch("{{ company }}",urlParams.get("search_api")))</script>
+			<span class="project-date">
+        <script>document.write(highlightSearch("({{ field.content }})",urlParams.get("search_api")))</script>
+      </span>
+    </div>
 	{%- endif -%}
 
 	{%- if field.label == "Body" -%}
-		<div class="body-container">{{ field.content }}</div>
+		<div class="body-container">
+      <script>document.write(highlightSearch("{{ field.content }}",urlParams.get("search_api")))</script>
+    </div>
 	{%- endif -%}
 
 	{%- if field.label == "Screenshot" -%}
@@ -61,10 +80,12 @@
     {# used to set the grid class to either 1, 2 or 3 columns #}
     {% set imageCount = file|length - 1 %}
 
+    {# ensure a maximum of 3 columns #}
     {%- if imageCount > 3 -%}
       {% set imageCount = 3 %}
     {%- endif -%}
 
+    {# TODO: JIRA: D8-19 - also search text above image #}
     <section data-featherlight-gallery="" data-featherlight-filter="a" class="project-item-grid project-items{{ imageCount }}">
       {{ field.content }}
     </section>
@@ -79,8 +100,9 @@
     </span>
 	{%- endif -%}
 
+  {# TODO: JIRA: D8-22 - also search technology #}
 	{%- if field.label == "Technology" -%}
-		<div class="project-technology">{{ field.content }}</div>
+		<div class="project-technology"><script>document.write(highlightSearch("{{ field.content }}",urlParams.get("search_api")))</script></div>
 	{%- endif -%}
 
 {%- endfor %}
