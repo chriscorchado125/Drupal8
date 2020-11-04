@@ -1,9 +1,6 @@
-const setupPage = () => {
+window.addEventListener('DOMContentLoaded', () => {
     setPagination();
     setItemCounts();
-    configureSearchForm();
     setNavItem();
-};
-window.addEventListener('DOMContentLoaded', () => {
-    setupPage();
+    configureSearchForm();
 });

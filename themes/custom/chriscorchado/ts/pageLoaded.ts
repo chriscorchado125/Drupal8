@@ -1,14 +1,10 @@
 /**
- * Setup pagination, page counts and search
+ * Setup pagination, page counts, nav items and search
  */
-const setupPage = () => {
+window.addEventListener('DOMContentLoaded', () => {
   setPagination();
   setItemCounts();
-  configureSearchForm();
   setNavItem();
-}
-
-window.addEventListener('DOMContentLoaded', () => {
-  setupPage();
+  configureSearchForm();
 });
 
