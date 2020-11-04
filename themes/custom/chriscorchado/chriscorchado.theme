@@ -9,12 +9,15 @@ function chriscorchado_preprocess_html(&$variables)
 
   switch ($path) {
     case '/courses':
+    case '/award-search':
       $pageName = "Courses";
       break;
     case '/companies':
+    case '/company-search':
       $pageName = "History";
       break;
     case '/projects':
+    case '/project-search':
       $pageName = "Projects";
       break;
     case '/contact/feedback':
