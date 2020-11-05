@@ -32,5 +32,11 @@ const setNavItem = () => {
     case 'contact/feedback':
   }
 
- document.querySelectorAll(`a[href='/${navItemToSelect}']`)[0].classList.add("nav-item-active");
+  const checkForNavItem = setInterval(function() {
+
+    if (document.querySelectorAll(`a[href='/${navItemToSelect}']`)[0]) {
+      document.querySelectorAll(`a[href='/${navItemToSelect}']`)[0].classList.add("nav-item-active");
+      clearInterval(checkForNavItem);
+    }
+  }, 100);
 };
