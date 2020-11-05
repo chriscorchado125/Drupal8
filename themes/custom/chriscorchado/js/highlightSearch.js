@@ -8,7 +8,6 @@ const highlightSearch = (itemToHighlight, searchedFor) => {
         if (itemToHighlight && +itemToHighlight !== -1) {
             searchString = itemToHighlight.replace("&amp;", "&").replace("&#039;", "'");
         }
-        console.log(searchString + " | " + searchedFor);
         if (searchString.match(searchTerm)) {
             results = searchString.replace(searchTerm, (match) => `<span class="highlightSearchText">${match}</span>`);
             dataToReturn = results;
