@@ -1,7 +1,7 @@
 /**
 * Get querystring values
 */
-const urlParams = new URLSearchParams(window.location.search);
+var urlParams:any = urlParams || new URLSearchParams(window.location.search);
 
 /**
  * Highlight search term within a string
@@ -9,7 +9,7 @@ const urlParams = new URLSearchParams(window.location.search);
  * @param {string} searchedFor - string to search for
  * @return {string} - search result with/without highlight
  */
-const highlightSearch = (itemToHighlight: string, searchedFor: string) => {
+function highlightSearch(itemToHighlight: string, searchedFor: string) {
 
   let  dataToReturn = itemToHighlight;
 

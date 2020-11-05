@@ -1,5 +1,5 @@
-const urlParams = new URLSearchParams(window.location.search);
-const highlightSearch = (itemToHighlight, searchedFor) => {
+var urlParams = urlParams || new URLSearchParams(window.location.search);
+function highlightSearch(itemToHighlight, searchedFor) {
     let dataToReturn = itemToHighlight;
     if (searchedFor) {
         let searchTerm = new RegExp(searchedFor, "gi");
@@ -14,4 +14,5 @@ const highlightSearch = (itemToHighlight, searchedFor) => {
         }
     }
     return dataToReturn.replace(/&gt;/g, '>').replace(/&lt;/g, '<');
-};
+}
+;
