@@ -19,14 +19,14 @@ const configureSearchForm = () => {
                 SEARCH_CONTAINER.setAttribute("action", subFolder + "/project-search");
                 clearSearchURL = subFolder + "/projects";
             }
-            document.getElementById("searchClear").onclick = () => location.href = clearSearchURL;
+            document.getElementById("searchClear").onclick = () => location.href = clearSearchURL + "?clear";
             let params = new URLSearchParams(document.location.search);
             if (params.get("search_api")) {
                 document.getElementById("searchSite").value = params.get("search_api");
                 document.getElementById("searchSite").select();
             }
             else {
-                if (document.location.pathname == "/award-search") {
+                if (document.location.toString().indexOf("clear") !== -1) {
                     document.getElementById("searchSite").focus();
                 }
             }

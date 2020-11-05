@@ -31,7 +31,7 @@ const configureSearchForm = () => {
         clearSearchURL = subFolder + "/projects";
       }
 
-      document.getElementById("searchClear").onclick = () => location.href = clearSearchURL;
+      document.getElementById("searchClear").onclick = () => location.href = clearSearchURL + "?clear";
 
       let params = new URLSearchParams(document.location.search);
 
@@ -40,8 +40,9 @@ const configureSearchForm = () => {
         (<HTMLInputElement>document.getElementById("searchSite")).value = params.get("search_api");
         (<HTMLInputElement>document.getElementById("searchSite")).select();
       } else {
+
         // search was cleared so set focus back to search input
-        if(document.location.pathname == "/award-search"){
+        if(document.location.toString().indexOf("clear") !== -1){
           (<HTMLInputElement>document.getElementById("searchSite")).focus();
         }
       }
