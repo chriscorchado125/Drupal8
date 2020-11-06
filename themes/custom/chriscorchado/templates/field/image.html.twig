@@ -11,16 +11,6 @@
  */
 #}
 
-{% set site_url = url("<current>") %}
-{% set site_url_subFolder = '' %}
-
-{# TODO: JIRA: D8-23 - move highlightSearch.js to libraries.yml #}
-{% if 'drupal8' in site_url|render|render  %}
-  {% set site_url_subFolder = "/drupal8"  %}
-{% endif %}
-
-<script src="{{ site_url_subFolder }}/themes/custom/chriscorchado/js/highlightSearch.js"></script>
-
 {% if '/company-screenshot/' in attributes.src|render|render %}
 
   <img loading="lazy" src="{{attributes.src}}" class="company-screenshot" alt="{{attributes.alt}}" title="{{attributes.alt}}"/>

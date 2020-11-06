@@ -31,6 +31,9 @@
 #}
 {{ attach_library('chriscorchado/project-css') }}
 
+{# also need the header-js here for the screenshot alt text search highlight #}
+{{ attach_library('chriscorchado/header-js') }}
+
 {% for field in fields -%}
 
 	{%- if field.label == "Title" -%}

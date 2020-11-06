@@ -29,18 +29,8 @@
  * @see template_preprocess_views_view_fields()
  */
 #}
-{# TODO: include {% include 'search-config.twig' %} #}
 {{ attach_library('chriscorchado/company-css') }}
-
-{% set site_url = url("<current>") %}
-{% set site_url_subFolder = '' %}
-
-{# Set subfolder for live site - TODO: move highlightSearch.js to libraries.yml #}
-{% if 'drupal8' in site_url|render|render  %}
-  {% set site_url_subFolder = "/drupal8"  %}
-{% endif %}
-
-<script src="{{ site_url_subFolder }}/themes/custom/chriscorchado/js/highlightSearch.js"></script>
+{{ attach_library('chriscorchado/header-js') }}
 
 {% for field in fields -%}
 

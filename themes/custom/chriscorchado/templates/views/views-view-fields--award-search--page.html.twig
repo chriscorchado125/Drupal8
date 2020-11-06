@@ -29,18 +29,9 @@
  * @see template_preprocess_views_view_fields()
  */
 #}
-{# TODO: include {% include 'search-config.twig' %} #}
 {{ attach_library('chriscorchado/course-css') }}
+{{ attach_library('chriscorchado/header-js') }}
 
-{% set site_url = url("<current>") %}
-{% set site_url_subFolder = '' %}
-
-{# Set subfolder for live site - TODO: move highlightSearch.js to libraries.yml #}
-{% if 'drupal8' in site_url|render|render  %}
-  {% set site_url_subFolder = "/drupal8"  %}
-{% endif %}
-
-<script src="{{ site_url_subFolder }}/themes/custom/chriscorchado/js/highlightSearch.js"></script>
 
 <div class="course-box box">
 
@@ -58,7 +49,6 @@
     {%- endif -%}
 
     {# START WRAPPER: date, trophy and PDF icons #}
-    {# TODO: find out why month does not highlight #}
     {%- if field.label == "Date Issued" -%}
       <div class="course-wrapper">
         <span class="course-date"><script>document.write(highlightSearch("{{ field.content }}",urlParams.get("search_api")))</script></span>
@@ -83,5 +73,4 @@
     {# END WRAPPER: date, trophy and PDF icons #}
 
   {%- endfor %}
-
 </div>

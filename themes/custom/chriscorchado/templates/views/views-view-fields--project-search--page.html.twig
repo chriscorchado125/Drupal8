@@ -30,16 +30,7 @@
  */
 #}
 {{ attach_library('chriscorchado/project-css') }}
-
-{% set site_url = url("<current>") %}
-{% set site_url_subFolder = '' %}
-
-{# TODO: JIRA: D8-23 - move highlightSearch.js to libraries.yml #}
-{% if 'drupal8' in site_url|render|render  %}
-  {% set site_url_subFolder = "/drupal8"  %}
-{% endif %}
-
-<script src="{{ site_url_subFolder }}/themes/custom/chriscorchado/js/highlightSearch.js"></script>
+{{ attach_library('chriscorchado/header-js') }}
 
 {% for field in fields -%}
 
@@ -47,7 +38,10 @@
 		<div class="project-title">
       <script>document.write(highlightSearch("{{ field.content }}",urlParams.get("search_api")))</script>
     </div>
+
+    {# used for the video name, if there is one #}
     {% set title = field.content %}
+
 	{%- endif -%}
 
 	{%- if field.label == "Company" -%}
