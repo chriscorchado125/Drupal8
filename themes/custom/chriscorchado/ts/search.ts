@@ -51,3 +51,33 @@ export const configureSearchForm = () => {
     }
   }, 100);
 }
+
+/**
+ * Handle no records
+ * @param {string} noRecordID - id of div to create
+ * @param {string} search - searched for text
+ * @param {string} appendToID - id of element to append to
+ * @param {string} msg - message
+ */
+export const noRecordsFound = (
+  noRecordID: string,
+  search: string,
+  appendToID: string,
+  msg: string
+) => {
+
+  if (document.getElementById(noRecordID)) {
+    document.getElementById(noRecordID).remove();
+  }
+
+  if (!document.getElementById(noRecordID) && search) {
+
+    document.getElementsByClassName("container")[0].classList.add("hide");
+
+    let notFound = document.createElement("div");
+    notFound.id = noRecordID;
+    notFound.innerHTML = `${msg} '${search}'`;
+
+    document.getElementById(appendToID).appendChild(notFound);
+  }
+};

@@ -34,3 +34,15 @@ export const configureSearchForm = () => {
         }
     }, 100);
 };
+export const noRecordsFound = (noRecordID, search, appendToID, msg) => {
+    if (document.getElementById(noRecordID)) {
+        document.getElementById(noRecordID).remove();
+    }
+    if (!document.getElementById(noRecordID) && search) {
+        document.getElementsByClassName("container")[0].classList.add("hide");
+        let notFound = document.createElement("div");
+        notFound.id = noRecordID;
+        notFound.innerHTML = `${msg} '${search}'`;
+        document.getElementById(appendToID).appendChild(notFound);
+    }
+};

@@ -1,4 +1,5 @@
 const MAX_ITEMS_PER_PAGE = 50;
+import { noRecordsFound } from "./search.js";
 export const setItemCounts = () => {
     let hasPreviousLink = false;
     let hasNextLink = false;
@@ -44,6 +45,7 @@ export const setItemCounts = () => {
     else {
         document.getElementById("search-container").className = "paginationNo";
         document.getElementById("searchCount").innerHTML = " 0 Items";
+        noRecordsFound("noRecords", searchedFor, "navigation", "No matches found for");
     }
 };
 export const setPagination = () => {
