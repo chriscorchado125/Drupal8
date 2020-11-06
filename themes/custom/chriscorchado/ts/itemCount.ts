@@ -3,7 +3,7 @@ const MAX_ITEMS_PER_PAGE = 50;
 /**
  * Setup item counts
  */
-const setItemCounts = () => {
+export const setItemCounts = () => {
 
   let hasPreviousLink = false;
   let hasNextLink = false;
@@ -29,40 +29,45 @@ const setItemCounts = () => {
     searchedFor = params.get("search_api");
   }
 
-  let count = parseInt(document.getElementById("record-total").innerText);
+  if(document.getElementById("record-total")){
+    let count = parseInt(document.getElementById("record-total").innerText);
 
-  // if there is a next or prev link then show the pagination
-  if (hasPreviousLink || hasNextLink) {
+    // if there is a next or prev link then show the pagination
+    if (hasPreviousLink || hasNextLink) {
 
-    let lastRange = pageNum * MAX_ITEMS_PER_PAGE;
-    let firstRange = lastRange - MAX_ITEMS_PER_PAGE;
+      let lastRange = pageNum * MAX_ITEMS_PER_PAGE;
+      let firstRange = lastRange - MAX_ITEMS_PER_PAGE;
 
-    // adjust firstRange to compensate for Drupals page numbers being zero indexed
-    if(firstRange === 0){
-      firstRange = 1;
-    }else{
-      firstRange = firstRange + 1;
+      // adjust firstRange to compensate for Drupals page numbers being zero indexed
+      if(firstRange === 0){
+        firstRange = 1;
+      }else{
+        firstRange = firstRange + 1;
+      }
+
+      if(count < MAX_ITEMS_PER_PAGE){
+        lastRange = (firstRange + count) - 1;
+      }
+
+      // add item counts to the page
+      document.getElementsByTagName("h1")[0].classList.add("paginationYes-H1");
+      document.getElementById("search-container").className = "paginationYes";
+      document.getElementById("searchCount").innerHTML = ` Items <span id="totalItems">${firstRange + "-" + lastRange}</span>`;
+    } else {
+      document.getElementsByTagName("h1")[0].classList.add("paginationNo-H1");
+      document.getElementById("search-container").className = "paginationNo";
+      document.getElementById("searchCount").innerHTML = `<span id="totalItems">${count}</span> ${count == 1 ? "Item" : "Items"}`;
     }
-
-    if(count < MAX_ITEMS_PER_PAGE){
-      lastRange = (firstRange + count) - 1;
-    }
-
-    // add item counts to the page
-    document.getElementsByTagName("h1")[0].classList.add("paginationYes-H1");
-    document.getElementById("search-container").className = "paginationYes";
-    document.getElementById("searchCount").innerHTML = ` Items <span id="totalItems">${firstRange + "-" + lastRange}</span>`;
-  } else {
-    document.getElementsByTagName("h1")[0].classList.add("paginationNo-H1");
+  }else{
     document.getElementById("search-container").className = "paginationNo";
-    document.getElementById("searchCount").innerHTML = `<span id="totalItems">${count}</span> ${count == 1 ? "Item" : "Items"}`;
+    document.getElementById("searchCount").innerHTML = " 0 Items";
   }
 }
 
 /**
  * Setup pagination links
  */
-const setPagination = () => {
+export const setPagination = () => {
 
   const DRUPAL_PAGER = document.querySelectorAll("ul.js-pager__items li a");
   let actualPrevLink = "", actualNextLink = "";

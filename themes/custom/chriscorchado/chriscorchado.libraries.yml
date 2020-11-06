@@ -8,7 +8,7 @@ global-css:
       css/drupal8.css: {}
       css/animation/preloader.css: {}
   js:
-    js/setNavItem.js: {}
+    js/drupalBehaviors.js: { attributes: { type: 'module' } }
 
 home-css:
   css:
@@ -20,22 +20,15 @@ company-css:
   css:
     theme:
       css/pages/company.css: {}
-      css/header/search.css: {}
-      css/header/pagination.css: {}
+
   js:
     # js/highlightSearch.js: {} TODO remove from template and add here
-    js/itemCount.js: {}
-    js/search.js: {}
-    js/pageLoaded.js: {}
-
 
 # TODO replace all featherlight/jquery css/js
 course-css:
   css:
     theme:
       css/pages/course.css: {}
-      css/header/search.css: {}
-      css/header/pagination.css: {}
       //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css: {}
       //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.gallery.min.css: {}
   js:
@@ -46,16 +39,11 @@ course-css:
     //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.gallery.min.js: {}
 
     js/lightboxConfig.js: {}
-    js/itemCount.js: {}
-    js/search.js: {}
-    js/pageLoaded.js: {}
 
 project-css:
   css:
     theme:
       css/pages/project.css: {}
-      css/header/search.css: {}
-      css/header/pagination.css: {}
       //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css: {}
       //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.gallery.min.css: {}
   js:
@@ -65,9 +53,6 @@ project-css:
     //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js: {}
     //cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.gallery.min.js: {}
     js/lightboxConfig.js: {}
-    js/itemCount.js: {}
-    js/search.js: {}
-    js/pageLoaded.js: {}
 
 contact-css:
   css:

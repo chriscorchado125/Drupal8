@@ -1,7 +1,7 @@
 /**
  * Configure search form
  */
-const configureSearchForm = () => {
+export const configureSearchForm = () => {
 
   let subFolder = "";
   let clearSearchURL = "";

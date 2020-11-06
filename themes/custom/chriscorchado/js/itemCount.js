@@ -1,5 +1,5 @@
 const MAX_ITEMS_PER_PAGE = 50;
-const setItemCounts = () => {
+export const setItemCounts = () => {
     let hasPreviousLink = false;
     let hasNextLink = false;
     if (document.getElementsByClassName("pager-navigation")[0]) {
@@ -17,30 +17,36 @@ const setItemCounts = () => {
     if (params.get("search_api")) {
         searchedFor = params.get("search_api");
     }
-    let count = parseInt(document.getElementById("record-total").innerText);
-    if (hasPreviousLink || hasNextLink) {
-        let lastRange = pageNum * MAX_ITEMS_PER_PAGE;
-        let firstRange = lastRange - MAX_ITEMS_PER_PAGE;
-        if (firstRange === 0) {
-            firstRange = 1;
+    if (document.getElementById("record-total")) {
+        let count = parseInt(document.getElementById("record-total").innerText);
+        if (hasPreviousLink || hasNextLink) {
+            let lastRange = pageNum * MAX_ITEMS_PER_PAGE;
+            let firstRange = lastRange - MAX_ITEMS_PER_PAGE;
+            if (firstRange === 0) {
+                firstRange = 1;
+            }
+            else {
+                firstRange = firstRange + 1;
+            }
+            if (count < MAX_ITEMS_PER_PAGE) {
+                lastRange = (firstRange + count) - 1;
+            }
+            document.getElementsByTagName("h1")[0].classList.add("paginationYes-H1");
+            document.getElementById("search-container").className = "paginationYes";
+            document.getElementById("searchCount").innerHTML = ` Items <span id="totalItems">${firstRange + "-" + lastRange}</span>`;
         }
         else {
-            firstRange = firstRange + 1;
+            document.getElementsByTagName("h1")[0].classList.add("paginationNo-H1");
+            document.getElementById("search-container").className = "paginationNo";
+            document.getElementById("searchCount").innerHTML = `<span id="totalItems">${count}</span> ${count == 1 ? "Item" : "Items"}`;
         }
-        if (count < MAX_ITEMS_PER_PAGE) {
-            lastRange = (firstRange + count) - 1;
-        }
-        document.getElementsByTagName("h1")[0].classList.add("paginationYes-H1");
-        document.getElementById("search-container").className = "paginationYes";
-        document.getElementById("searchCount").innerHTML = ` Items <span id="totalItems">${firstRange + "-" + lastRange}</span>`;
     }
     else {
-        document.getElementsByTagName("h1")[0].classList.add("paginationNo-H1");
         document.getElementById("search-container").className = "paginationNo";
-        document.getElementById("searchCount").innerHTML = `<span id="totalItems">${count}</span> ${count == 1 ? "Item" : "Items"}`;
+        document.getElementById("searchCount").innerHTML = " 0 Items";
     }
 };
-const setPagination = () => {
+export const setPagination = () => {
     const DRUPAL_PAGER = document.querySelectorAll("ul.js-pager__items li a");
     let actualPrevLink = "", actualNextLink = "";
     for (let i = 0; i < DRUPAL_PAGER.length; i++) {

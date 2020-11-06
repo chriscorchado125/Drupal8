@@ -1,4 +1,4 @@
-const configureSearchForm = () => {
+export const configureSearchForm = () => {
     let subFolder = "";
     let clearSearchURL = "";
     if (location.pathname.toString().indexOf('/drupal8/') !== -1) {
