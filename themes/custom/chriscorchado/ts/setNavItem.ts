@@ -1,29 +1,29 @@
 import { getCurrentURL } from "./getCurrentURL.js";
 
 /**
- * Set current navigation item style
- * Defaults are handled in menu.html.twig - this adds the search pages
+ * Set the current navigation link style when searching
+ * Defaults are commented out below and handled in menu.html.twig
  */
 export const setNavItem = () => {
 
   let navItemToSelect = ""
 
   switch (getCurrentURL()) {
-    case 'courses':
+  //case 'courses':
     case 'award-search':
       navItemToSelect = "courses";
       break;
-    case 'companies':
+  //case 'companies':
     case 'company-search':
       navItemToSelect = "companies";
       break;
-    case 'projects':
+  //case 'projects':
     case 'project-search':
       navItemToSelect = "projects";
       break;
-    case 'contact/feedback':
   }
 
+  // make sure the nav item is there in order to add the active style
   const checkForNavItem = setInterval(function() {
 
     if (document.querySelectorAll(`a[href='/${navItemToSelect}']`)[0]) {
