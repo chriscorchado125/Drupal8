@@ -28,6 +28,7 @@ export const configureSearchForm = () => {
             else {
                 if (document.location.toString().indexOf("clear") !== -1) {
                     document.getElementById("searchSite").focus();
+                    history.pushState(null, null, window.location.protocol + "//" + window.location.host + window.location.pathname);
                 }
             }
             clearInterval(checkForSearchContainer);

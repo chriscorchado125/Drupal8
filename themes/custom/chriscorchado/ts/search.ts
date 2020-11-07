@@ -41,9 +41,10 @@ export const configureSearchForm = () => {
         (<HTMLInputElement>document.getElementById("searchSite")).select();
       } else {
 
-        // search was cleared so set focus back to search input
+        // search was cleared so set focus back to search input and remove the 'clear' querystring item
         if(document.location.toString().indexOf("clear") !== -1){
           (<HTMLInputElement>document.getElementById("searchSite")).focus();
+          history.pushState(null, null, window.location.protocol + "//" + window.location.host + window.location.pathname);
         }
       }
 
