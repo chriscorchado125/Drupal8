@@ -88,11 +88,11 @@ export const setPagination = () => {
 
   // configure the previous and next links
   const prevLink = actualPrevLink ?
-    `<a href="${actualPrevLink}" class="pager-navigation" title="View the previous page" tabindex="10" role="button">Prev</a>`
-    : `<span class="pager-navigation disabled" title="There is no previous page available" tabindex="11" role="button">Prev</span>`;
+    `<a href="${actualPrevLink}" class="pager-navigation" title="View the previous page" role="button">Prev</a>`
+    : `<span class="pager-navigation disabled" title="There is no previous page available" role="button">Prev</span>`;
   const nextLink = actualNextLink ?
-    `<a href="${actualNextLink}" class="pager-navigation" title="View the next page" tabindex="12" role="button">Next</a>`
-    : `<span class="pager-navigation disabled" title="There is no next page available" tabindex="13" role="button">Next</span>`;
+    `<a href="${actualNextLink}" class="pager-navigation" title="View the next page" role="button">Next</a>`
+    : `<span class="pager-navigation disabled" title="There is no next page available" role="button">Next</span>`;
 
   if (actualPrevLink.length + actualNextLink.length) {
     document.getElementById("pagination").innerHTML = prevLink + nextLink;

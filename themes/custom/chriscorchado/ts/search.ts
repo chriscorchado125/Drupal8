@@ -31,9 +31,31 @@ export const configureSearchForm = () => {
         clearSearchURL = subFolder + "/projects";
       }
 
-      document.getElementById("searchClear").onclick = () => location.href = clearSearchURL + "?clear";
+      // only allow the alphabet and spaces when searching
+      const re = new RegExp(('[a-zA-Z \s]'));
+
+      const SEARCH_INPUT = (<HTMLInputElement>document.getElementById("searchSite"));
+
+      SEARCH_INPUT.onkeydown = (e) => {
+        if (re.exec(e.key) == null) {
+          e.preventDefault();
+          return false;
+        }
+      }
+
+      // prevent bypassing the onkeydown filter by checking the input value on submit
+      SEARCH_CONTAINER.onsubmit = (e) => {
+        if (re.exec(SEARCH_INPUT.value) == null) {
+          e.preventDefault();
+          alert("Only letters and spaces are allowed")
+          return false;
+         }
+      }
 
       let params = new URLSearchParams(document.location.search);
+
+      // set a 'clear' querystring param in order to set the focus to the search box after the search is cleared
+      document.getElementById("searchClear").onclick = () => location.href = clearSearchURL + "?clear";
 
       // if searching then set searched value and select it
       if(params.get("search_api")){
@@ -41,7 +63,7 @@ export const configureSearchForm = () => {
         (<HTMLInputElement>document.getElementById("searchSite")).select();
       } else {
 
-        // search was cleared so set focus back to search input and remove the 'clear' querystring item
+        // search was cleared so set focus back to search input and remove the 'clear' querystring param
         if(document.location.toString().indexOf("clear") !== -1){
           (<HTMLInputElement>document.getElementById("searchSite")).focus();
           history.pushState(null, null, window.location.protocol + "//" + window.location.host + window.location.pathname);

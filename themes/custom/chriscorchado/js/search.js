@@ -19,8 +19,23 @@ export const configureSearchForm = () => {
                 SEARCH_CONTAINER.setAttribute("action", subFolder + "/project-search");
                 clearSearchURL = subFolder + "/projects";
             }
-            document.getElementById("searchClear").onclick = () => location.href = clearSearchURL + "?clear";
+            const re = new RegExp(('[a-zA-Z \s]'));
+            const SEARCH_INPUT = document.getElementById("searchSite");
+            SEARCH_INPUT.onkeydown = (e) => {
+                if (re.exec(e.key) == null) {
+                    e.preventDefault();
+                    return false;
+                }
+            };
+            SEARCH_CONTAINER.onsubmit = (e) => {
+                if (re.exec(SEARCH_INPUT.value) == null) {
+                    e.preventDefault();
+                    alert("Only letters and spaces are allowed");
+                    return false;
+                }
+            };
             let params = new URLSearchParams(document.location.search);
+            document.getElementById("searchClear").onclick = () => location.href = clearSearchURL + "?clear";
             if (params.get("search_api")) {
                 document.getElementById("searchSite").value = params.get("search_api");
                 document.getElementById("searchSite").select();
