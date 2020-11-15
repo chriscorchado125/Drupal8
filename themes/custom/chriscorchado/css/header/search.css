@@ -2,8 +2,8 @@
 #search-container {
   float: right;
   padding: 0px;
-  width: 380px;
-  text-align: center;
+  width: 350px;
+  text-align: right;
   /* search textbox */
   /* remove IE “clear field or cross” X button from inputs field */
   /* search button */ }
@@ -38,10 +38,13 @@
     float: none;
     width: 100%;
     padding: 2px 0;
-    margin-top: 0px; } }
+    margin: 0 auto 5px auto !important;
+    text-align: center; }
+    #search-container #searchClear {
+      margin-right: 20px; } }
 @media (max-width: 530px) {
   #search-container #searchSite {
-    width: 125px; }
+    width: 105px; }
   #search-container #searchBtn {
     margin-left: 5px; }
   #search-container #searchCount {

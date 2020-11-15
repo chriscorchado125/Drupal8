@@ -8,6 +8,7 @@ h1 {
   align-items: stretch;
   justify-content: space-evenly;
   font-size: 12px;
+  margin: auto !important;
   /* individual project container */
   /* project description */
   /* text above thumbnails */
@@ -18,7 +19,7 @@ h1 {
     border-radius: 10px;
     border: 1px solid #d1d0d0;
     min-height: 400px;
-    margin: 15px 0 15px 0;
+    margin: 15px auto 15px auto;
     max-width: 330px; }
   .project-container .project-title {
     color: rgba(0, 0, 0, 0.9);

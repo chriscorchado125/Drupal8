@@ -1,3 +1,5 @@
+@import "./../variables.scss";
+
 // classes added dynamically in order to vertically align the search container
 .paginationYes {
   margin: -65px 0 0 0 !important;
@@ -19,7 +21,6 @@
 #pagination {
   text-align: center;
   margin-top: 5px;
-  display: inline-block;
 
   a {
     color: #ffffff;

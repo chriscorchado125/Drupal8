@@ -35,8 +35,8 @@ h1 {
 }
 
 .homepage-wrapper {
-  max-width: 1100px;
-  margin: 0px auto 50px auto;
+  max-width: 1070px !important;
+  margin: 28px auto 50px auto !important;
 }
 
 .homepage-wrapper h2 {
@@ -197,7 +197,7 @@ ul li {
 
 @media (max-width: 700px) {
   h1 {
-    padding-top: 35px;
+    padding-top: 50px !important;
   }
 
   .homepage-wrapper {
@@ -234,7 +234,7 @@ ul li {
 
 @media (max-width: 500px) {
   h1 {
-    padding-top: 25px;
+    margin-top: 80px !important;
   }
   .container {
     ul {
@@ -248,6 +248,11 @@ ul li {
 
 @media (max-width: 400px) {
   h1 {
-    margin-top: 90px !important;
+    margin-top: 55px !important;
+  }
+
+  .homepage-wrapper {
+    margin: 10px 0 0 0 !important;
+    padding: 0 28px;
   }
 }

@@ -9,6 +9,7 @@ h1 {
   grid-gap: 5px;
   justify-items: center;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: auto;
   /* course title */
   h2 {
     font-size: 12px;
@@ -21,15 +22,11 @@ h1 {
   margin: 0 0 20px 0;
   font-size: 12px;
   max-width: 300px;
-  min-width: 260px;
 
   h2 {
     height: 23px;
   }
 
-  img {
-    max-width: 200px;
-  }
   .course-wrapper {
     max-width: 190px;
     margin: auto;
@@ -42,6 +39,9 @@ h1 {
   .course-links {
     float: right;
     padding: 0 2px;
+  }
+  img {
+    max-width: 90%;
   }
 }
 
@@ -60,7 +60,7 @@ h1 {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
   .courses-container {
     grid-template-columns: 1fr 1fr;
     .course-box {

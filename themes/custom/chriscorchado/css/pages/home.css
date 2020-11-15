@@ -24,8 +24,8 @@ h1 {
   text-align: left; }
 
 .homepage-wrapper {
-  max-width: 1100px;
-  margin: 0px auto 50px auto; }
+  max-width: 1070px !important;
+  margin: 28px auto 50px auto !important; }
 
 .homepage-wrapper h2 {
   text-align: center;
@@ -149,7 +149,7 @@ ul li {
     text-align: left; } }
 @media (max-width: 700px) {
   h1 {
-    padding-top: 35px; }
+    padding-top: 50px !important; }
 
   .homepage-wrapper {
     padding: 0 30px; }
@@ -173,7 +173,7 @@ ul li {
     height: 50px; } }
 @media (max-width: 500px) {
   h1 {
-    padding-top: 25px; }
+    margin-top: 80px !important; }
 
   .container ul {
     margin-left: -20px; }
@@ -181,6 +181,10 @@ ul li {
     max-width: 95px !important; } }
 @media (max-width: 400px) {
   h1 {
-    margin-top: 90px !important; } }
+    margin-top: 55px !important; }
+
+  .homepage-wrapper {
+    margin: 10px 0 0 0 !important;
+    padding: 0 28px; } }
 
 /*# sourceMappingURL=home.css.map */
