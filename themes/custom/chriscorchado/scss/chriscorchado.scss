@@ -1,4 +1,6 @@
 @import "variables.scss";
+@import "header/navigation.scss";
+@import "animation/hover-animation.scss";
 
 html {
   overflow-y: scroll;
@@ -31,8 +33,8 @@ h1 {
   font-size: 30px;
 }
 
-.highlightSearchText {
-  background-color: yellow;
+a {
+  color: $main_color;
 }
 
 /* space for top navigation */

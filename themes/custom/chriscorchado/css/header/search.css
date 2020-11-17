@@ -1,8 +1,11 @@
 @charset "UTF-8";
+.highlightSearchText {
+  background-color: yellow; }
+
 #search-container {
   float: right;
   padding: 0px;
-  width: 350px;
+  width: 360px;
   text-align: right;
   /* search textbox */
   /* remove IE “clear field or cross” X button from inputs field */
@@ -26,7 +29,7 @@
   #search-container .searchBtn:hover {
     color: #fff;
     box-shadow: 0 0 #fff;
-    background-color: #7399ea;
+    background-color: #346adf;
     text-shadow: 1px 1px #000; }
   #search-container #searchClear {
     margin-right: 10px; }

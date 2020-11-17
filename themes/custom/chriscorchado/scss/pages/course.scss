@@ -41,7 +41,7 @@ h1 {
     padding: 0 2px;
   }
   img {
-    max-width: 90%;
+    max-width: 85%;
   }
 }
 
@@ -50,6 +50,7 @@ h1 {
     grid-template-columns: 1fr 1fr 1fr;
     .course-box {
       padding: 20px;
+      width: 280px;
       img {
         max-width: 170px;
       }
@@ -60,11 +61,20 @@ h1 {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .courses-container {
     grid-template-columns: 1fr 1fr;
     .course-box {
       padding: 15px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .course-box {
+    width: 250px !important;
+    img {
+      max-width: 140px;
     }
   }
 }

@@ -8,6 +8,11 @@
   background-color: $off_white;
 }
 
+// Hide Drupal pagination heading
+.pagination-heading {
+  display: none;
+}
+
 // Hide Drupal pagination top
 .views-element-container header {
   display: none;

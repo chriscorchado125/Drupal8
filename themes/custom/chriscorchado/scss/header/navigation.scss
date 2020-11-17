@@ -25,7 +25,8 @@
   /* force nav to stay horizontal */
   .navbar-nav {
     flex-direction: row;
-    max-height: 70px !important;
+    height: 70px !important;
+
     /* align items vertically*/
     .nav-item {
       display: flex;
@@ -35,6 +36,7 @@
       padding: 0px 5px;
       width: 80px;
     }
+
     .nav-item-active,
     .nav-item:hover {
       font-weight: bold;
@@ -42,6 +44,10 @@
     }
   }
 } // .navbar
+
+.navbar-light .navbar-nav a {
+  color: rgba(0, 0, 0, 0.7) !important;
+}
 
 @media (max-width: 700px) {
   h1 {

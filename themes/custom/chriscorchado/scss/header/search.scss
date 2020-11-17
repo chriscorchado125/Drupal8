@@ -1,9 +1,13 @@
 @import "./../variables.scss";
 
+.highlightSearchText {
+  background-color: yellow;
+}
+
 #search-container {
   float: right;
   padding: 0px;
-  width: 350px;
+  width: 360px;
   text-align: right;
 
   label {

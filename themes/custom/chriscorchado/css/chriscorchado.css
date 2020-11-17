@@ -1,3 +1,221 @@
+@charset "UTF-8";
+.paginationYes {
+  margin: -65px 0 0 0 !important; }
+
+.paginationNo {
+  margin: -50px 0 0 0 !important; }
+
+.paginationYes-H1 {
+  margin: 30px 0 20px 0; }
+
+.paginationNo-H1 {
+  margin: 20px 0 20px 0; }
+
+#pagination {
+  text-align: center;
+  margin-top: 5px;
+  /* next / prev text */ }
+  #pagination a {
+    color: #ffffff;
+    text-shadow: 1px 1px #000; }
+  #pagination .pager-navigation {
+    background-color: #346adf;
+    margin: 0px 5px;
+    padding: 3px 10px;
+    font-size: 12px; }
+  #pagination .disabled {
+    color: #3d3c3c;
+    background-color: #cac9c9 !important; }
+
+#recordCount {
+  display: none; }
+
+@media (max-width: 700px) {
+  .paginationYes {
+    margin: 0 0 0 0 !important; }
+
+  .paginationNo {
+    margin: 0 0 0 0 !important; }
+
+  .pager-navigation {
+    margin: 0px 2px;
+    padding: 3px 7px; }
+
+  #pagination {
+    display: inline; } }
+@media (max-width: 500px) {
+  .paginationYes-H1 {
+    margin: 120px 0 0 0 !important; }
+
+  .paginationNo-H1 {
+    margin: 120px 0 0 0 !important; } }
+@media (max-width: 460px) {
+  .paginationYes-H1 {
+    padding-top: 5px; }
+
+  .paginationNo-H1 {
+    margin: 120px 0 0 0 !important; } }
+.highlightSearchText {
+  background-color: yellow; }
+
+#search-container {
+  float: right;
+  padding: 0px;
+  width: 360px;
+  text-align: right;
+  /* search textbox */
+  /* remove IE “clear field or cross” X button from inputs field */
+  /* search button */ }
+  #search-container label {
+    margin-bottom: 0; }
+  #search-container #searchCount {
+    font-size: 12px;
+    text-align: right;
+    margin-right: 5px;
+    display: inline-block;
+    width: 85px; }
+  #search-container #searchSite {
+    width: 150px; }
+  #search-container ::-ms-clear {
+    display: none; }
+  #search-container .searchBtn {
+    padding: 4px;
+    font-size: 12px;
+    margin-left: 0; }
+  #search-container .searchBtn:hover {
+    color: #fff;
+    box-shadow: 0 0 #fff;
+    background-color: #346adf;
+    text-shadow: 1px 1px #000; }
+  #search-container #searchClear {
+    margin-right: 10px; }
+  #search-container .ccBtn {
+    display: inline-block; }
+
+@media (max-width: 700px) {
+  #search-container {
+    float: none;
+    width: 100%;
+    padding: 2px 0;
+    margin: 0 auto 5px auto !important;
+    text-align: center; }
+    #search-container #searchClear {
+      margin-right: 20px; } }
+@media (max-width: 530px) {
+  #search-container #searchSite {
+    width: 105px; }
+  #search-container #searchBtn {
+    margin-left: 5px; }
+  #search-container #searchCount {
+    width: 80px;
+    margin-right: 2px; } }
+@media (max-width: 400px) {
+  #searchSite {
+    margin-bottom: 10px; } }
+@media (max-width: 350px) {
+  #search-container #searchSite {
+    font-size: 12px; }
+  #search-container #searchCount {
+    width: 75px; }
+  #search-container .searchBtn {
+    padding: 1px 4px; } }
+/* remove IE “clear field or cross” X button from inputs field */
+::-ms-clear {
+  display: none; }
+
+#logo {
+  margin: 5px 16px 5px 0; }
+  #logo img {
+    padding: 5px;
+    height: 58px; }
+
+#logo > img:hover {
+  border: 1px dashed #346adf; }
+
+#navbarCollapse {
+  max-width: 1100px;
+  margin: auto; }
+
+.navbar {
+  border-bottom: 2px solid #346adf;
+  /* force nav to stay horizontal */ }
+  .navbar .navbar-nav {
+    flex-direction: row;
+    height: 70px !important;
+    /* align items vertically*/ }
+    .navbar .navbar-nav .nav-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0px 5px;
+      width: 80px; }
+    .navbar .navbar-nav .nav-item-active,
+    .navbar .navbar-nav .nav-item:hover {
+      font-weight: bold;
+      color: #346adf !important; }
+
+.navbar-light .navbar-nav a {
+  color: rgba(0, 0, 0, 0.7) !important; }
+
+@media (max-width: 700px) {
+  h1 {
+    padding-top: 0px !important; }
+
+  .navbar {
+    text-align: left; }
+    .navbar .navbar-nav {
+      justify-content: space-between;
+      width: 90%; } }
+@media (max-width: 500px) {
+  #logo img {
+    height: 48px; } }
+@media (max-width: 400px) {
+  #logo {
+    margin: 5px 5px 5px 0; }
+
+  #navbarCollapse {
+    max-width: 95%; }
+
+  .navbar {
+    padding: 0; }
+
+  #navbarCollapse {
+    font-size: 13px;
+    margin: 0 0 0 5px; } }
+@media (max-width: 350px) {
+  #navbarCollapse {
+    max-width: 310px; } }
+.box {
+  position: relative;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
+
+.box::after {
+  content: "";
+  border-radius: 5px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
+
+.box:hover {
+  -webkit-transform: scale(1.02, 1.02);
+  transform: scale(1.02, 1.02); }
+
+.box:hover::after {
+  opacity: 1; }
+
 html {
   overflow-y: scroll; }
 
@@ -5,7 +223,7 @@ body {
   padding: 0px !important;
   margin: 0;
   box-sizing: border-box;
-  scrollbar-color: #7399ea #e2eafb;
+  scrollbar-color: #346adf #e2eafb;
   background-image: url(https://chriscorchado.com/images/cclogobg.jpg);
   background-attachment: fixed; }
 
@@ -21,11 +239,11 @@ body {
   display: none; }
 
 h1 {
-  color: #7399ea;
+  color: #346adf;
   font-size: 30px; }
 
-.highlightSearchText {
-  background-color: yellow; }
+a {
+  color: #346adf; }
 
 /* space for top navigation */
 main.container {
@@ -42,7 +260,7 @@ main.container {
   font-size: 36px;
   max-width: 700px;
   border-radius: 5px;
-  color: #7399ea;
+  color: #346adf;
   background-color: #f8f9fa;
   padding: 15px;
   text-align: center;
@@ -86,7 +304,7 @@ a.gallery {
   bottom: 0;
   padding: 3px;
   background-color: #f8f9fa;
-  border-top: 2px solid #7399ea; }
+  border-top: 2px solid #346adf; }
 
 .site-version {
   text-align: center;
