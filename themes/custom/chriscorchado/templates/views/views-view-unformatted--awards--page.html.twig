@@ -15,28 +15,29 @@
  * @see template_preprocess_views_view_unformatted()
  */
 #}
+{{ attach_library('chriscorchado/course-css') }}
 
 <div class="container courses-container row">
 
-  {% if title %}
-    <h3>{{ title }}</h3>
-  {% endif %}
+	{% if title %}
+		<h3>{{ title }}</h3>
+	{% endif %}
 
-  {% set recordTotal = 0 %}
+	{% set recordTotal = 0 %}
 
-  {% for row in rows %}
+	{% for row in rows %}
 
-    {% set recordTotal = recordTotal + 1 %}
+		{% set recordTotal = recordTotal + 1 %}
 
-    {%
+		{%
       set row_classes = [
         default_row_class ? 'views-row',
       ]
     %}
 
-    {{- row.content -}}
+		{{- row.content -}}
 
-  {% endfor %}
+	{% endfor %}
 </div>
 
 <div id="record-total" class="hide">

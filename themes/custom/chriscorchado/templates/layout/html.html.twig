@@ -29,11 +29,14 @@
 		<title>{{ head_title.title }}</title>
 		<css-placeholder token="{{ placeholder_token|raw }}">
 			<js-placeholder token="{{ placeholder_token|raw }}"></head>
-			<body{{attributes}}>
+			<body{{attributes}} title="Chris Corchado">
+
 				{# Keyboard navigation/accessibility link to main content section in page.html.twig. #}
-				<a href="#content" class="visually-hidden focusable screen-reader" id="skip-links" title="Skip the Navigation" style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">
-					{{ 'Skip Navigation'|t }}
+				{# <span role="navigation" aria-label="navigation"> #}
+					<a href="#main-content" class="visually-hidden focusable screen-reader" id="skip-links" tabindex="0"> {{ 'Skip Navigation'|t }}
 				</a>
+				{# </span> #}
+
 				{{ page_top }}
 				{{ page }}
 				{{ page_bottom }}

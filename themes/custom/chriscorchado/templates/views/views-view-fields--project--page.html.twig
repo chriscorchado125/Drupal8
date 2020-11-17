@@ -38,7 +38,7 @@
 
 	{%- if field.label == "Title" -%}
 		<div class="project-title">{{ field.content }}</div>
-    {% set title = field.content %}
+		{% set title = field.content %}
 	{%- endif -%}
 
 	{%- if field.label == "Company" -%}
@@ -48,7 +48,7 @@
 	{%- if field.label == "Date" -%}
 		<div class="project-company">{{ company }}
 			<span class="project-date">({{ field.content }})</span>
-    </div>
+		</div>
 	{%- endif -%}
 
 	{%- if field.label == "Body" -%}
@@ -57,30 +57,32 @@
 
 	{%- if field.label == "Screenshot" -%}
 
-    {% set rawValue = field.content|raw %}
+		{% set rawValue = field.content|raw %}
 
-    {# used a space to delimit multiple images on the content type because delimiting with a comma adds double quotes #}
-    {% set file = rawValue|split('<div class="project-item shadow"') %}
+		{# used a space to delimit multiple images on the content type because delimiting with a comma adds double quotes #}
+		{% set file = rawValue|split('<div class="project-item shadow"') %}
 
-    {# used to set the grid class to either 1, 2 or 3 columns #}
-    {% set imageCount = file|length - 1 %}
+		{# used to set the grid class to either 1, 2 or 3 columns #}
+		{% set imageCount = file|length - 1 %}
 
-    {%- if imageCount > 3 -%}
-      {% set imageCount = 3 %}
-    {%- endif -%}
+		{%- if imageCount > 3 -%}
+			{% set imageCount = 3 %}
+		{%- endif -%}
 
-    <section data-featherlight-gallery="" data-featherlight-filter="a" class="project-item-grid project-items{{ imageCount }}">
-      {{ field.content }}
-    </section>
+		<section data-featherlight-gallery="" data-featherlight-filter="a" class="project-item-grid project-items{{ imageCount }}">
+			{{ field.content }}
+		</section>
 
 	{%- endif -%}
 
-  {%- if field.label == "Video URL" and field.content -%}
-    <span title="Play Video">
-      <a class="play-video" href="https://chriscorchado.com/video.html?url={{ field.content }}&amp;name={{ title }}" target="_blank">Play Video
-        <img loading="lazy" src="https://chriscorchado.com/images/play_video_new_window_icon.png" alt="Play Video Icon" width="20">
-      </a>
-    </span>
+	{%- if field.label == "Video URL" and field.content -%}
+		<span title="Play Video">
+			<a class="play-video" href="https://chriscorchado.com/video.html?url={{ field.content }}&amp;name={{ title }}" target="_blank" rel="noopener" title="Opens in a new window">Play Video
+
+
+				<img loading="lazy" src="https://chriscorchado.com/images/play_video_new_window_icon.png" alt="Play Video Icon" width="20">
+			</a>
+		</span>
 	{%- endif -%}
 
 	{%- if field.label == "Technology" -%}

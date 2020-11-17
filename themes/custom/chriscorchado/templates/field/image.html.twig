@@ -13,21 +13,26 @@
 
 {% if '/company-screenshot/' in attributes.src|render|render %}
 
-  <img loading="lazy" src="{{attributes.src}}" class="company-screenshot" alt="{{attributes.alt}}" title="{{attributes.alt}}"/>
+	<img loading="lazy" src="{{attributes.src}}" class="company-screenshot" alt="{{attributes.alt}} screenshot" title="Screenshot of {{attributes.alt}}"/>
 
 {% endif %}
 
 
 {% if '/project-screenshot/' in attributes.src|render|render %}
 
-  <div class="project-item shadow" title="{{attributes.alt}}">
+	<div class="project-item shadow" title="{{attributes.alt}}">
 
-    <a href="{{attributes.src}}" class="gallery">
+		<a href="{{attributes.src}}" class="gallery">
 
-      <div class="project-item-desc"><script>document.write(highlightSearch("{{ attributes.alt }}",urlParams.get("search_api")))</script></div>
+			<div class="project-item-desc">
+				<script>
+					document.write(highlightSearch("{{ attributes.alt }}", urlParams.get("search_api")))
+				</script>
+			</div>
 
-      <img loading="lazy" src="{{attributes.src}}" alt="{{attributes.alt}}" title="{{attributes.alt}}" />
-    </a>
-  </div>
+			<span><img loading="lazy" src="{{attributes.src}}" alt="Screenshot of {{attributes.alt}}"/></span>
+
+		</a>
+	</div>
 
 {% endif %}
