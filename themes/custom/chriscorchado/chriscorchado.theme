@@ -10,22 +10,32 @@ function chriscorchado_preprocess_html(&$variables)
   switch ($path) {
     case '/courses':
     case '/award-search':
-      $pageName = "Courses";
+      $pageName = "Courses Taken";
       break;
     case '/companies':
     case '/company-search':
-      $pageName = "History";
+      $pageName = "Work History";
       break;
     case '/projects':
     case '/project-search':
-      $pageName = "Projects";
+      $pageName = "Project Samples";
       break;
     case '/contact/feedback':
-      $pageName = "Contact";
+      $pageName = "Contact Me";
       break;
     default:
       $pageName = "About Me";
   }
 
-  $variables['head_title']['title'] =  "Chris Corchado - " . $pageName . " - Portfolio and Resume";
+  $variables['head_title']['title'] =  "Chris Corchado - " . $pageName;
+
+  $description = [
+    '#tag' => 'meta',
+    '#attributes' => [
+      'name' => 'description',
+      'content' => 'Website to learn, practice and showcase my work',
+    ],
+  ];
+
+  $variables['page']['#attached']['html_head'][] = [$description, 'description'];
 }
