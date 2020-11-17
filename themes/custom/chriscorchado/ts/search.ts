@@ -45,11 +45,18 @@ export const configureSearchForm = () => {
 
       // prevent bypassing the onkeydown filter by checking the input value on submit
       SEARCH_CONTAINER.onsubmit = (e) => {
-        if (re.exec(SEARCH_INPUT.value) == null) {
+
+        if (SEARCH_INPUT.value == "" || re.exec(SEARCH_INPUT.value) == null) {
           e.preventDefault();
-          alert("Only letters and spaces are allowed")
+
+          if (SEARCH_INPUT.value == "") {
+            alert("Please enter something to search for");
+          }else if (re.exec(SEARCH_INPUT.value) == null) {
+            alert("Searching with numbers and/or special characters is not enabled")
+          }
+
           return false;
-         }
+        }
       }
 
       let params = new URLSearchParams(document.location.search);
