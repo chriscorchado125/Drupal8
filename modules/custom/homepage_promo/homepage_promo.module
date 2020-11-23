@@ -1,0 +1,68 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_form_alter().
+ */
+function homepage_promo_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+
+  // set the promotion values, if there is one
+  $result = getPromotion();
+
+  if($result['title']){
+    $form['title']['#default_value'] = $result['title'];
+    $form['description']['#default_value'] = $result['description'];
+    $form['submit']['#value'] = t('Update Promotion');
+  }else{
+    $form['submit']['#value'] = t('Add Promotion');
+  }
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function homepage_promo_preprocess_page(array &$variables) : void {
+
+  // only run the promo on the homepage
+  if ($variables['is_front']) {
+
+    // check for a promotion
+    $result = getPromotion();
+
+    if($result){
+
+      // attach CSS and JS for promotion modal
+      $variables['#attached']['library'][] = 'homepage_promo/homepagePromo';
+
+      $modal ='
+      <div id="myModal" class="modal">
+
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2 id="homepage_promo_title">' . $result['title'] . '</h2>
+          </div>
+
+          <div class="modal-body">
+            <h3 id="homepage_promo_description">' . $result['description'] . '</h3>
+          </div>
+
+        </div>
+      </div>';
+
+      echo $modal;
+    }
+  }
+}
+
+/**
+ * Get the promotion
+ */
+function getPromotion(){
+  $database = \Drupal::database();
+  $query = $database->query("SELECT * FROM {homepage_promo}");
+  $result = $query->fetchAssoc();
+  return $result;
+}

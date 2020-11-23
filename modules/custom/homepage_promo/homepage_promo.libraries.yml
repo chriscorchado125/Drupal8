@@ -1,0 +1,9 @@
+homepagePromo:
+  version: 1.x
+  css:
+    component:
+      css/modal.css: {}
+  js:
+    js/detectBrowser.js: {}
+    js/cookies.js: {}
+    js/promo.js: {}

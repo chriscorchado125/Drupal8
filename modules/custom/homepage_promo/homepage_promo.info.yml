@@ -1,0 +1,6 @@
+name: Homepage
+description: Manage homepage promotion which is only displayed once a day per user/browser
+package: Website Promotions
+type: module
+version: 1.0
+core: 8.x

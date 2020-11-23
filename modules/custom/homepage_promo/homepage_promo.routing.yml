@@ -1,0 +1,9 @@
+homepage_promo.form:
+  path: "/hp"
+  defaults:
+    _form: '\Drupal\homepage_promo\Form\PromoForm'
+    _title: "Homepage Promotion"
+  requirements:
+    _permission: "administer site configuration"
+  options:
+    _admin_route: TRUE

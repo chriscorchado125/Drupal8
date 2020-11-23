@@ -1,0 +1,64 @@
+<?php
+/**
+ * Implements hook_schema().
+ */
+function homepage_promo_schema(){
+
+  $schema['homepage_promo'] = array(
+    'description' => 'Store promotion info',
+    'fields' => array(
+      'id' => array(
+        'description' => 'Unique ID',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE
+      ),
+      'uid' => array(
+        'description' => 'User ID',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0
+      ),
+      'nid' => array(
+        'description' => 'Node ID',
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => FALSE,
+        'default' => 0
+      ),
+      'title' => array(
+        'description' => 'Title',
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => FALSE,
+        'default' => ''
+      ),
+      'description' => array(
+        'description' => 'Description',
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => FALSE,
+        'default' => ''
+      ),
+      'created' => array(
+        'description' => 'Created',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'updated' => array(
+        'description' => 'Updated',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+    ),
+    'primary key' => array('id'),
+    'indexes' => array(
+      'node' => array('nid'),
+      'node_user'=> array('nid', 'uid')
+    ),
+  );
+
+  return $schema;
+}
