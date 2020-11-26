@@ -24,8 +24,6 @@ export const configureSearchForm = () => {
       if(location.pathname.toString().indexOf("course") !== -1 || location.pathname.toString().indexOf("award") !== -1){
         SEARCH_CONTAINER.setAttribute("action", subFolder + "/award-search");
         clearSearchURL = subFolder + "/courses";
-
-         SEARCH_CONTAINER.setAttribute("action", subFolder + "/company-search");
       }
 
       if(location.pathname.toString().indexOf("project") !== -1){
