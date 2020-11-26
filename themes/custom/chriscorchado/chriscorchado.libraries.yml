@@ -59,3 +59,9 @@ contact-css:
     theme:
       css/pages/contact.css: {}
       css/header/profile.css: {}
+
+resume-css:
+  css:
+    theme:
+      css/pages/resume.css: {}
+      css/header/profile.css: {}
