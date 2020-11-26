@@ -6,8 +6,9 @@
 function chriscorchado_preprocess_html(&$variables)
 {
   $path = $current_path = \Drupal::service('path.current')->getPath();
+  $alias = \Drupal::service('path.alias_manager')->getAliasByPath($path);
 
-  switch ($path) {
+  switch ($alias) {
     case '/courses':
     case '/award-search':
       $pageName = "Courses Taken";
@@ -23,8 +24,14 @@ function chriscorchado_preprocess_html(&$variables)
     case '/contact/feedback':
       $pageName = "Contact Me";
       break;
-    default:
+    case '/resume':
+      $pageName = "Resume";
+      break;
+    case '/about-me':
       $pageName = "About Me";
+      break;
+    default:
+      $pageName = "Sorry, can't find this page";
   }
 
   $variables['head_title']['title'] =  "Chris Corchado - " . $pageName;
