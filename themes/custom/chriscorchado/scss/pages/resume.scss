@@ -170,7 +170,7 @@
 @media (max-width: 700px) {
   .container {
     h1 {
-      margin-top: 130px !important;
+      margin-top: 130px;
     }
 
     .resume {
@@ -200,6 +200,9 @@
 }
 
 @media (max-width: 520px) {
+  main.container {
+    padding: 20px 5px 10px 5px !important;
+  }
   .container {
     .resume {
       padding: 0 0;
@@ -225,9 +228,21 @@
 }
 
 @media (max-width: 400px) {
+  .container {
+    .resume {
+      padding: 0 10px;
+    }
+
+    h1 {
+      margin-top: 100px;
+    }
+  }
   #profiles {
-    .icon img {
-      height: 25px;
+    .icon {
+      width: 35px !important;
+      img {
+        height: 15px;
+      }
     }
   }
 }
