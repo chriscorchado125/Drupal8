@@ -1,5 +1,5 @@
 name: Homepage
-description: Manage homepage promotion which is only displayed once a day per user/browser
+description: Manage homepage promotion which is only displayed once a day per user/browser (cookie based so not 100%)
 package: Website Promotions
 type: module
 version: 1.0
