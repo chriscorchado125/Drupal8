@@ -33,3 +33,5 @@ function highlightSearch (itemToHighlight: string, searchedFor: string) {
 
   return dataToReturn.replace(/&gt;/g, '>').replace(/&lt;/g, '<')
 }
+
+export { urlParams, highlightSearch }

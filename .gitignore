@@ -50,3 +50,10 @@
 
 .sass-cache
 *.sql
+
+error_log
+install.log
+libraries/
+modules/
+sites/
+themes/bootstrap/
