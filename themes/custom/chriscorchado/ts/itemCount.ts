@@ -51,17 +51,14 @@ export const setItemCounts = () => {
       }
 
       // add item counts to the page
-      document.getElementsByTagName("h1")[0].classList.add("paginationYes-H1");
-      document.getElementById("search-container").className = "paginationYes";
-      document.getElementById("searchCount").innerHTML = ` Items <span id="totalItems">${firstRange + "-" + lastRange}</span>`;
+      document.getElementById("search-container").className = "pagination-yes";
+      document.getElementById("search-count").innerHTML = ` Items <span id="total-items">${firstRange + "-" + lastRange}</span>`;
     } else {
-      document.getElementsByTagName("h1")[0].classList.add("paginationNo-H1");
-      document.getElementById("search-container").className = "paginationNo";
-      document.getElementById("searchCount").innerHTML = `<span id="totalItems">${count}</span> ${count == 1 ? "Item" : "Items"}`;
+      document.getElementById("search-container").className = "pagination-no";
+      document.getElementById("search-count").innerHTML = `<span id="total-items">${count}</span> ${count == 1 ? "Item" : "Items"}`;
     }
   }else{
-    document.getElementById("search-container").className = "paginationNo";
-    document.getElementById("searchCount").innerHTML = " 0 Items";
+    document.getElementById("search-count").innerHTML = " 0 Items";
     noRecordsFound("noRecords", searchedFor, "navigation", "No matches found for");
   }
 }
