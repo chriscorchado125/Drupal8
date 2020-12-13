@@ -11,6 +11,10 @@ export const configureSearchForm = () => {
     subFolder = "/drupal8";
   }
 
+  // update the email input label text and put cursor inside the textbox
+  document.querySelector('label[for="edit-mail"]').innerHTML = "Email";
+  document.getElementById("edit-mail").focus();
+
   const checkForSearchContainer = setInterval(function() {
     if (document.getElementById("search-container")) {
 
@@ -34,7 +38,7 @@ export const configureSearchForm = () => {
       // only allow the alphabet and spaces when searching
       const re = new RegExp(('[a-zA-Z \s]'));
 
-      const SEARCH_INPUT = (<HTMLInputElement>document.getElementById("searchSite"));
+      const SEARCH_INPUT = (<HTMLInputElement>document.getElementById("search-site"));
 
       SEARCH_INPUT.onkeydown = (e) => {
         if (re.exec(e.key) == null) {
@@ -62,17 +66,17 @@ export const configureSearchForm = () => {
       let params = new URLSearchParams(document.location.search);
 
       // set a 'clear' querystring param in order to set the focus to the search box after the search is cleared
-      document.getElementById("searchClear").onclick = () => location.href = clearSearchURL + "?clear";
+      document.getElementById("search-clear-btn").onclick = () => location.href = clearSearchURL + "?clear";
 
       // if searching then set searched value and select it
       if(params.get("search_api")){
-        (<HTMLInputElement>document.getElementById("searchSite")).value = params.get("search_api");
-        (<HTMLInputElement>document.getElementById("searchSite")).select();
+        (<HTMLInputElement>document.getElementById("search-site")).value = params.get("search_api");
+        (<HTMLInputElement>document.getElementById("search-site")).select();
       } else {
 
         // search was cleared so set focus back to search input and remove the 'clear' querystring param
         if(document.location.toString().indexOf("clear") !== -1){
-          (<HTMLInputElement>document.getElementById("searchSite")).focus();
+          (<HTMLInputElement>document.getElementById("search-site")).focus();
           history.pushState(null, null, window.location.protocol + "//" + window.location.host + window.location.pathname);
         }
       }

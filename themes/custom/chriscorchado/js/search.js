@@ -4,6 +4,8 @@ export const configureSearchForm = () => {
     if (location.pathname.toString().indexOf('/drupal8/') !== -1) {
         subFolder = "/drupal8";
     }
+    document.querySelector('label[for="edit-mail"]').innerHTML = "Email";
+    document.getElementById("edit-mail").focus();
     const checkForSearchContainer = setInterval(function () {
         if (document.getElementById("search-container")) {
             const SEARCH_CONTAINER = document.getElementById("search-container");
@@ -20,7 +22,7 @@ export const configureSearchForm = () => {
                 clearSearchURL = subFolder + "/projects";
             }
             const re = new RegExp(('[a-zA-Z \s]'));
-            const SEARCH_INPUT = document.getElementById("searchSite");
+            const SEARCH_INPUT = document.getElementById("search-site");
             SEARCH_INPUT.onkeydown = (e) => {
                 if (re.exec(e.key) == null) {
                     e.preventDefault();
@@ -40,14 +42,14 @@ export const configureSearchForm = () => {
                 }
             };
             let params = new URLSearchParams(document.location.search);
-            document.getElementById("searchClear").onclick = () => location.href = clearSearchURL + "?clear";
+            document.getElementById("search-clear-btn").onclick = () => location.href = clearSearchURL + "?clear";
             if (params.get("search_api")) {
-                document.getElementById("searchSite").value = params.get("search_api");
-                document.getElementById("searchSite").select();
+                document.getElementById("search-site").value = params.get("search_api");
+                document.getElementById("search-site").select();
             }
             else {
                 if (document.location.toString().indexOf("clear") !== -1) {
-                    document.getElementById("searchSite").focus();
+                    document.getElementById("search-site").focus();
                     history.pushState(null, null, window.location.protocol + "//" + window.location.host + window.location.pathname);
                 }
             }
