@@ -10,6 +10,9 @@ function chriscorchado_preprocess_html(&$variables)
   $pageName = '';
 
   switch ($alias) {
+    case '/about-me':
+      $pageName = "About Me";
+      break;
     case '/courses':
     case '/award-search':
       $pageName = "Courses and Awards";
@@ -28,16 +31,14 @@ function chriscorchado_preprocess_html(&$variables)
     case '/resume':
       $pageName = "Resume";
       break;
-    case '/about-me':
-      $pageName = "About Me";
-      break;
   }
 
-  // only override public site
-  if($pageName){
-
+  // Only override external site pages
+  if($pageName !== ''){
+    // Set page title meta tag
     $variables['head_title']['title'] =  $pageName . ' | Chris Corchado';
 
+    // Set description meta tag
     $description = [
       '#tag' => 'meta',
       '#attributes' => [
@@ -45,9 +46,9 @@ function chriscorchado_preprocess_html(&$variables)
         'content' => 'Chris Corchado | Portfolio and Resume | ' . $pageName
       ],
     ];
-
     $variables['page']['#attached']['html_head'][] = [$description, 'description'];
 
+    // Set keywords meta tag
     $keywords = [
       '#tag' => 'meta',
       '#attributes' => [
@@ -55,7 +56,6 @@ function chriscorchado_preprocess_html(&$variables)
         'content' => 'Chris Corchado, Full Stack, Front End, Back End, Website, Web Application, UI, UX, User Interface, User Experience, Architect, Engineer, Programmer, Developer, Designer, Portfolio, Resume'
       ],
     ];
-
     $variables['page']['#attached']['html_head'][] = [$keywords, 'keywords'];
   }
 }
