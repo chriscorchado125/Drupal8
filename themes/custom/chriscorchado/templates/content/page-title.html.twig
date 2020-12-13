@@ -15,7 +15,24 @@
 <div class="page-title-container">
 {{ title_prefix }}
 {% if title %}
-  <h1{{ title_attributes }}>{{ title }}</h1>
+
+  {# Override page titles #}
+  {% if 'History' in title|render|render %}
+    <h1{{ title_attributes }}>Work {{ title }}</h1>
+
+  {% elseif 'Courses' in title|render|render %}
+    <h1{{ title_attributes }}>{{ title }} and Awards</h1>
+
+  {% elseif 'Project' in title|render|render %}
+    <h1{{ title_attributes }}>{{ title }} Samples</h1>
+
+  {% elseif 'Contact' in title|render|render %}
+    <h1{{ title_attributes }}>{{ title }} Me</h1>
+
+  {% else %}
+    <h1{{ title_attributes }}>{{ title }}</h1>
+  {% endif %}
+
 {% endif %}
 {{ title_suffix }}
 </div>
