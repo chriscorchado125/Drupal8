@@ -1,10 +1,5 @@
 @import "./../variables.scss";
 
-#logo img {
- border: 1px dashed $main_color;
- height: 60px;
-}
-
 // homepage is not searchable
 #search-container {
   display: none;
@@ -85,6 +80,11 @@
     padding-top: 10px;
     margin: auto;
   }
+}
+
+#logo img {
+  border: 1px dashed $main_color;
+  height: 60px;
 }
 
 .site-versions {

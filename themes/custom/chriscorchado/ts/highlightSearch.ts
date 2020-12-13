@@ -1,7 +1,7 @@
 /**
 * Get querystring values
 */
-var urlParams:any = urlParams || new URLSearchParams(window.location.search);
+const urlParams:any = new URLSearchParams(window.location.search)
 
 /**
  * Highlight search term within a string
@@ -9,29 +9,27 @@ var urlParams:any = urlParams || new URLSearchParams(window.location.search);
  * @param {string} searchedFor - string to search for
  * @return {string} - search result with/without highlight
  */
-function highlightSearch(itemToHighlight: string, searchedFor: string) {
-
-  let  dataToReturn = itemToHighlight;
+function highlightSearch (itemToHighlight: string, searchedFor: string) {
+  let dataToReturn = itemToHighlight
 
   if (searchedFor) {
-    let searchTerm = new RegExp(searchedFor, "gi");
-    let searchString = "";
-    let results = "";
+    const searchTerm = new RegExp(searchedFor, 'gi')
+    let searchString = ''
+    let results = ''
 
     if (itemToHighlight && +itemToHighlight !== -1) {
-      searchString = itemToHighlight.replace("&amp;", "&").replace("&#039;", "'");
+      searchString = itemToHighlight.replace('&amp;', '&').replace('&#039;', '\'')
     }
 
     if (searchString.match(searchTerm)) {
       results = searchString.replace(
         searchTerm,
-        (match) => `<span class="highlightSearchText">${match}</span>`
-      );
+        (match) => `<span class='highlightSearchText'>${match}</span>`
+      )
 
-      dataToReturn = results;
+      dataToReturn = results
     }
   }
 
   return dataToReturn.replace(/&gt;/g, '>').replace(/&lt;/g, '<')
-};
-
+}
