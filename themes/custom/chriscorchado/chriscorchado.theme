@@ -7,12 +7,12 @@ function chriscorchado_preprocess_html(&$variables)
 {
   $path = $current_path = \Drupal::service('path.current')->getPath();
   $alias = \Drupal::service('path.alias_manager')->getAliasByPath($path);
-  $pageName ="";
+  $pageName = '';
 
   switch ($alias) {
     case '/courses':
     case '/award-search':
-      $pageName = "Courses Taken";
+      $pageName = "Courses and Awards";
       break;
     case '/companies':
     case '/company-search':
@@ -36,16 +36,26 @@ function chriscorchado_preprocess_html(&$variables)
   // only override public site
   if($pageName){
 
-    $variables['head_title']['title'] =  "Chris Corchado - " . $pageName;
+    $variables['head_title']['title'] =  $pageName . ' | Chris Corchado';
 
     $description = [
       '#tag' => 'meta',
       '#attributes' => [
         'name' => 'description',
-        'content' => 'Website to learn, practice and showcase my work',
+        'content' => 'Chris Corchado | Portfolio and Resume | ' . $pageName
       ],
     ];
 
     $variables['page']['#attached']['html_head'][] = [$description, 'description'];
+
+    $keywords = [
+      '#tag' => 'meta',
+      '#attributes' => [
+        'name' => 'keywords',
+        'content' => 'Chris Corchado, Full Stack, Front End, Back End, Website, Web Application, UI, UX, User Interface, User Experience, Architect, Engineer, Programmer, Developer, Designer, Portfolio, Resume'
+      ],
+    ];
+
+    $variables['page']['#attached']['html_head'][] = [$keywords, 'keywords'];
   }
 }
