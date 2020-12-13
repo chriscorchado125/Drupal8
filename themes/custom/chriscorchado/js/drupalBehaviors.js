@@ -1,7 +1,7 @@
-import { setPagination, setItemCounts } from "./itemCount.js";
-import { configureSearchForm } from "./search.js";
-import { setNavItem } from "./setNavItem.js";
-import { getCurrentURL } from "./getCurrentURL.js";
+import { setPagination, setItemCounts } from './itemCount.js';
+import { configureSearchForm } from './search.js';
+import { setNavItem } from './setNavItem.js';
+import { configureContact } from './configureContact.js';
 (function ($, Drupal) {
     Drupal.behaviors.chriscorchado = {
         attach: function (context, settings) {
@@ -9,7 +9,7 @@ import { getCurrentURL } from "./getCurrentURL.js";
             setItemCounts();
             setNavItem();
             configureSearchForm();
-            getCurrentURL();
+            configureContact();
         }
     };
-})(jQuery, Drupal);
+})(window.jQuery, window.Drupal);
