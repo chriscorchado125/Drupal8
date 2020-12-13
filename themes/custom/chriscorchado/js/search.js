@@ -4,8 +4,6 @@ export const configureSearchForm = () => {
     if (location.pathname.toString().indexOf('/drupal8/') !== -1) {
         subFolder = "/drupal8";
     }
-    document.querySelector('label[for="edit-mail"]').innerHTML = "Email";
-    document.getElementById("edit-mail").focus();
     const checkForSearchContainer = setInterval(function () {
         if (document.getElementById("search-container")) {
             const SEARCH_CONTAINER = document.getElementById("search-container");

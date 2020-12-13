@@ -1,6 +1,7 @@
 import { setPagination, setItemCounts } from "./itemCount.js";
 import { configureSearchForm } from "./search.js";
 import { setNavItem } from "./setNavItem.js";
+import { getCurrentURL } from "./getCurrentURL.js";
 
 /**
  * Setup pagination, page counts, main navigation items and search
@@ -12,6 +13,7 @@ import { setNavItem } from "./setNavItem.js";
       setItemCounts();
       setNavItem();
       configureSearchForm();
+      getCurrentURL();
     }
   };
 })(jQuery, Drupal);

@@ -11,10 +11,6 @@ export const configureSearchForm = () => {
     subFolder = "/drupal8";
   }
 
-  // update the email input label text and put cursor inside the textbox
-  document.querySelector('label[for="edit-mail"]').innerHTML = "Email";
-  document.getElementById("edit-mail").focus();
-
   const checkForSearchContainer = setInterval(function() {
     if (document.getElementById("search-container")) {
 
