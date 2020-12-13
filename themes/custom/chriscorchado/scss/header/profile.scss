@@ -5,18 +5,20 @@
   max-width: 380px;
   font-size: 12px;
   text-align: center;
-  margin-top: -60px;
+  margin-top: -50px;
 
   .icon {
     display: inline-block;
     width: 50px;
     padding: 0 5px;
     margin: 0 5px;
+    text-align: center;
 
     img {
       height: 30px;
     }
   }
+
   a span {
     color: $main_color;
   }
@@ -24,26 +26,28 @@
 
 @media (max-width: 700px) {
   #profiles {
-    margin: 0;
+    margin: 0 auto 10px auto;
     float: none;
     max-width: 100%;
     text-align: center;
     font-size: 11px;
+
     .icon {
+      width: 90px;
+      text-align: center;
+
       img {
-        height: 25px;
+        height: 20px;
+        margin-right: 5px;
       }
     }
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   #profiles {
-    margin: -7px 0 5px 0;
     .icon {
-      img {
-        height: 15px;
-      }
+      width: 80px;
     }
   }
 }

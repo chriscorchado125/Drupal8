@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  padding: 0px !important;
+  padding: 0;
   margin: 0;
   box-sizing: border-box;
   scrollbar-color: $main_color $main_color_light;
@@ -24,50 +24,34 @@ body {
   overflow: hidden;
 }
 
-.hide {
-  display: none;
-}
-
-h1 {
-  color: $main_color;
-  font-size: 30px;
-}
-
-a {
-  color: $main_color;
-}
-
-/* space for top navigation */
-main.container {
-  padding-top: 80px;
+// Main content
+.container {
+  margin: 0 auto 25px auto;
   text-align: center;
-  padding: 20px 5px 60px 5px;
+  padding: 20px 5px 20px 5px;
   background-color: #fff;
   border-radius: 0 0 15px 15px;
-}
 
-#recordCount {
-  display: none;
-}
-
-#noRecords {
-  font-size: 36px;
-  max-width: 700px;
-  border-radius: 5px;
-  color: $main_color;
-  background-color: $off_white;
-  padding: 15px;
-  text-align: center;
-  margin: auto;
-  margin-top: 150px !important;
+  h1 {
+    margin-top: 100px;
+    color: $main_color;
+    font-size: 30px;
+  }
 }
 
 a:link {
   text-decoration: none;
 }
 
-a.gallery {
-  color: #000 !important;
+.hide {
+  display: none;
+}
+
+// Button style reset - IOS uses the pill shape
+button {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
 }
 
 .shadow {
@@ -76,7 +60,7 @@ a.gallery {
   box-shadow: 3px 3px 5px 3px #ccc; /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 
-/* override the featherlight lightbox arrows */
+// Override the featherlight lightbox arrows
 .featherlight-next span,
 .featherlight-previous span {
   font-size: 24px !important;
@@ -104,13 +88,15 @@ a.gallery {
   border-top: 2px solid $main_color;
 }
 
-// footer tech icons
+// Footer tech icons
 .site-version {
   text-align: center;
   padding: 10px 0;
+
   div {
     display: inline-block;
     margin: 0 5px;
+
     img {
       width: 45px;
     }
@@ -118,13 +104,25 @@ a.gallery {
 }
 
 @media (max-width: 700px) {
-  h1 {
-    font-size: 24px;
+  .container {
+    h1 {
+      font-size: 24px;
+      margin-top: 120px !important;
+    }
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 600px) {
   #footer {
     display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    h1 {
+      font-size: 20px;
+      margin-top: 100px !important;
+    }
   }
 }

@@ -1,8 +1,4 @@
 @import "./../variables.scss";
-
-h1 {
-  margin: 100px 0 20px 0 !important;
-}
 .company {
   display: grid;
   grid-template-columns: 30% 30% 30%;
@@ -10,7 +6,7 @@ h1 {
   justify-content: space-evenly;
 }
 
-/* individual company container */
+// Individual company container
 .company-container {
   border: 1px solid $item_bg_border;
   padding: 0 0 20px 0;
@@ -38,7 +34,7 @@ h1 {
   background-color: $item_bg_color;
 }
 
-/* body text - the bullet items */
+// Body text - the bullet items
 .body-container {
   max-width: 400px;
   margin: 20px auto;
@@ -55,7 +51,7 @@ h1 {
 .employment-dates {
   position: absolute;
   width: 100%;
-  bottom: 0;
+  bottom: 0; /* no unit */
   font-size: 12px;
   padding: 10px;
   background-color: $main_color_light;
@@ -67,12 +63,14 @@ h1 {
 }
 
 @media (max-width: 1200px) {
-  .company {
+  .container {
     grid-template-columns: 45% 45%;
   }
+
   .company-container {
     max-width: 455px;
   }
+
   .company-screenshot {
     max-width: 300px;
   }
@@ -85,9 +83,6 @@ h1 {
 }
 
 @media (max-width: 700px) {
-  h1 {
-    margin: 135px 0 20px 0 !important;
-  }
   .company {
     p {
       padding: 5px 20px;
@@ -96,15 +91,16 @@ h1 {
 }
 
 @media (max-width: 500px) {
-  h1 {
-    padding-bottom: 20px;
-  }
   .company-screenshot {
     max-width: 250px;
   }
 }
 
 @media (max-width: 400px) {
+  .container .company {
+    padding-top: 10px;
+  }
+
   .company-screenshot {
     max-width: 200px;
   }

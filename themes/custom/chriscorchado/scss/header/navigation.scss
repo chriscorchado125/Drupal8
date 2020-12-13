@@ -2,11 +2,12 @@
 @import "./pagination.scss";
 @import "./search.scss";
 
-#logo {
-  margin: 5px 16px 5px 0;
-  img {
+
+#logo{
+  margin-right: 1rem;
+  > img {
     padding: 5px;
-    height: 58px;
+    height: 60px;
   }
 }
 
@@ -14,26 +15,27 @@
   border: 1px dashed $main_color;
 }
 
-#navbarCollapse {
-  max-width: 1100px;
-  margin: auto;
+#navbar-collapse {
+  max-width: 1100px !important;
+  margin: 5px auto 0 auto;
 }
 
 .navbar {
   border-bottom: 2px solid $main_color;
+  display: block;
+  min-height: 88px !important;
 
-  /* force nav to stay horizontal */
+  // Force nav to stay horizontal
   .navbar-nav {
     flex-direction: row;
-    height: 70px !important;
 
-    /* align items vertically*/
+    // Align items vertically
     .nav-item {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 0;
-      padding: 0px 5px;
+      margin: 0; /* no unit */
+      padding: 0 5px;
       width: 80px;
     }
 
@@ -43,53 +45,47 @@
       color: $main_color !important;
     }
   }
-} // .navbar
+}
 
 .navbar-light .navbar-nav a {
   color: rgba(0, 0, 0, 0.7) !important;
 }
 
 @media (max-width: 700px) {
-  h1 {
-    padding-top: 0px !important;
-  }
+  .navbar-nav {
+    justify-content: space-between;
+    width: 90%;
 
-  .navbar {
-    text-align: left;
-    .navbar-nav {
-      justify-content: space-between;
-      width: 90%;
+    .nav-item {
+      justify-content: left;
+      width: 60px;
+      margin-left: 15px;
     }
   }
 }
 
 @media (max-width: 500px) {
   #logo img {
-    height: 48px;
+    height: 50px;
   }
 }
 
 @media (max-width: 400px) {
-  #logo {
-    margin: 5px 5px 5px 0;
-  }
-
-  #navbarCollapse {
-    max-width: 95%;
+  #logo img {
+    margin: 5px 0 0 10px;
   }
 
   .navbar {
-    padding: 0;
-  }
+    padding: 0; /* no unit */
 
-  #navbarCollapse {
-    font-size: 13px;
-    margin: 0 0 0 5px;
-  }
-}
+    .navbar-nav {
+      width: 100%;
+      margin-left: -7px !important;
 
-@media (max-width: 350px) {
-  #navbarCollapse {
-    max-width: 310px;
+      .nav-item {
+        margin-left: -2px;
+        font-size: 14px;
+      }
+    }
   }
 }

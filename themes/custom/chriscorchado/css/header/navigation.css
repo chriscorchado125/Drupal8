@@ -1,154 +1,165 @@
-@charset "UTF-8";
-.paginationYes {
-  margin: -65px 0 0 0 !important; }
+label {
+  margin-bottom: 2px; }
 
-.paginationNo {
-  margin: -50px 0 0 0 !important; }
+.pagination-yes {
+  margin: -58px 0 0 0 !important; }
 
-.paginationYes-H1 {
-  margin: 30px 0 20px 0; }
-
-.paginationNo-H1 {
-  margin: 20px 0 20px 0; }
+.pagination-no {
+  margin: -46px 0 0 0 !important; }
 
 #pagination {
   text-align: center;
+  padding-left: 15px;
   margin-top: 5px;
-  /* next / prev text */ }
+  display: inline-block; }
   #pagination a {
-    color: #ffffff;
+    color: #fff;
     text-shadow: 1px 1px #000; }
   #pagination .pager-navigation {
     background-color: #346adf;
-    margin: 0px 5px;
+    margin: 0 5px;
     padding: 3px 10px;
     font-size: 12px; }
   #pagination .disabled {
     color: #3d3c3c;
     background-color: #cac9c9 !important; }
 
-#recordCount {
+#record-count {
   display: none; }
 
 @media (max-width: 700px) {
-  .paginationYes {
-    margin: 0 0 0 0 !important; }
+  .pagination-yes {
+    margin: -2px 0 0 0 !important; }
 
-  .paginationNo {
+  .pagination-no {
     margin: 0 0 0 0 !important; }
-
-  .pager-navigation {
-    margin: 0px 2px;
-    padding: 3px 7px; }
 
   #pagination {
-    display: inline; } }
+    display: inline;
+    padding-left: 30px; } }
 @media (max-width: 500px) {
-  .paginationYes-H1 {
-    margin: 120px 0 0 0 !important; }
+  .pagination-yes {
+    margin: -5px 0 0 0 !important; }
 
-  .paginationNo-H1 {
-    margin: 120px 0 0 0 !important; } }
-@media (max-width: 460px) {
-  .paginationYes-H1 {
-    padding-top: 5px; }
+  #pagination {
+    padding-left: 10px; }
+    #pagination .pager-navigation {
+      margin: 0;
+      /* no unit */
+      padding: 5px; } }
+@media (max-width: 400px) {
+  #search-site {
+    width: 85px !important; }
 
-  .paginationNo-H1 {
-    margin: 120px 0 0 0 !important; } }
+  #pagination {
+    padding-left: 5px;
+    margin-right: 5px; } }
+@media (max-width: 350px) {
+  #pagination {
+    padding-left: 2px;
+    margin-right: 2px; }
+    #pagination .pager-navigation {
+      font-size: 11px; } }
+::-ms-clear {
+  display: none; }
+
 .highlightSearchText {
   background-color: yellow; }
 
+#no-records {
+  font-size: 36px;
+  max-width: 700px;
+  border-radius: 5px;
+  color: #346adf;
+  background-color: #f8f9fa;
+  padding: 15px;
+  text-align: center;
+  margin: auto;
+  margin-top: 150px;
+  box-shadow: 2px 2px 15px 2px #888; }
+
 #search-container {
   float: right;
-  padding: 0px;
-  width: 360px;
-  text-align: right;
-  /* search textbox */
-  /* remove IE “clear field or cross” X button from inputs field */
-  /* search button */ }
+  padding: 0;
+  /* no unit */
+  width: 340px;
+  text-align: center; }
   #search-container label {
-    margin-bottom: 0; }
-  #search-container #searchCount {
+    display: inline-block; }
+  #search-container #search-count {
     font-size: 12px;
     text-align: right;
     margin-right: 5px;
     display: inline-block;
     width: 85px; }
-  #search-container #searchSite {
+  #search-container #search-site {
     width: 150px; }
-  #search-container ::-ms-clear {
-    display: none; }
-  #search-container .searchBtn {
-    padding: 4px;
+  #search-container .search-btn {
+    padding: 2px;
     font-size: 12px;
-    margin-left: 0; }
-  #search-container .searchBtn:hover {
+    margin-left: 0;
+    /* no unit */ }
+  #search-container .search-btn:hover {
     color: #fff;
     box-shadow: 0 0 #fff;
-    background-color: #346adf;
-    text-shadow: 1px 1px #000; }
-  #search-container #searchClear {
-    margin-right: 10px; }
-  #search-container .ccBtn {
-    display: inline-block; }
+    background-color: #346adf; }
 
 @media (max-width: 700px) {
   #search-container {
     float: none;
     width: 100%;
-    padding: 2px 0;
-    margin: 0 auto 5px auto !important;
-    text-align: center; }
-    #search-container #searchClear {
-      margin-right: 20px; } }
-@media (max-width: 530px) {
-  #search-container #searchSite {
-    width: 105px; }
-  #search-container #searchBtn {
-    margin-left: 5px; }
-  #search-container #searchCount {
-    width: 80px;
-    margin-right: 2px; } }
-@media (max-width: 400px) {
-  #searchSite {
-    margin-bottom: 10px; } }
-@media (max-width: 350px) {
-  #search-container #searchSite {
-    font-size: 12px; }
-  #search-container #searchCount {
-    width: 75px; }
-  #search-container .searchBtn {
-    padding: 1px 4px; } }
-/* remove IE “clear field or cross” X button from inputs field */
-::-ms-clear {
-  display: none; }
+    margin: -5px 0 10px 0 !important; }
 
+  #no-records {
+    font-size: 30px;
+    max-width: 500px; } }
+@media (max-width: 500px) {
+  #search-container #search-site {
+    width: 105px; }
+  #search-container #search-btn {
+    margin-left: 5px; }
+  #search-container #search-count {
+    width: 80px; }
+
+  #no-records {
+    font-size: 18px;
+    max-width: 95%;
+    margin-top: 130px; } }
+@media (max-width: 350px) {
+  #search-container #search-site {
+    width: 95px; }
+  #search-container #search-btn {
+    margin-left: 2px;
+    font-size: 11px; }
+  #search-container #search-count {
+    width: 70px;
+    font-size: 11px; } }
 #logo {
-  margin: 5px 16px 5px 0; }
-  #logo img {
+  margin-right: 1rem; }
+  #logo > img {
     padding: 5px;
-    height: 58px; }
+    height: 60px; }
 
 #logo > img:hover {
   border: 1px dashed #346adf; }
 
-#navbarCollapse {
-  max-width: 1100px;
-  margin: auto; }
+#navbar-collapse {
+  max-width: 1100px !important;
+  margin: 5px auto 0 auto; }
 
 .navbar {
   border-bottom: 2px solid #346adf;
-  /* force nav to stay horizontal */ }
+  display: block;
+  min-height: 88px !important; }
   .navbar .navbar-nav {
-    flex-direction: row;
-    height: 70px !important;
-    /* align items vertically*/ }
+    flex-direction: row; }
     .navbar .navbar-nav .nav-item {
       display: flex;
       justify-content: center;
       align-items: center;
       margin: 0;
-      padding: 0px 5px;
+      /* no unit */
+      padding: 0 5px;
       width: 80px; }
     .navbar .navbar-nav .nav-item-active,
     .navbar .navbar-nav .nav-item:hover {
@@ -159,32 +170,28 @@
   color: rgba(0, 0, 0, 0.7) !important; }
 
 @media (max-width: 700px) {
-  h1 {
-    padding-top: 0px !important; }
-
-  .navbar {
-    text-align: left; }
-    .navbar .navbar-nav {
-      justify-content: space-between;
-      width: 90%; } }
+  .navbar-nav {
+    justify-content: space-between;
+    width: 90%; }
+    .navbar-nav .nav-item {
+      justify-content: left;
+      width: 60px;
+      margin-left: 15px; } }
 @media (max-width: 500px) {
   #logo img {
-    height: 48px; } }
+    height: 50px; } }
 @media (max-width: 400px) {
-  #logo {
-    margin: 5px 5px 5px 0; }
-
-  #navbarCollapse {
-    max-width: 95%; }
+  #logo img {
+    margin: 5px 0 0 10px; }
 
   .navbar {
-    padding: 0; }
-
-  #navbarCollapse {
-    font-size: 13px;
-    margin: 0 0 0 5px; } }
-@media (max-width: 350px) {
-  #navbarCollapse {
-    max-width: 310px; } }
+    padding: 0;
+    /* no unit */ }
+    .navbar .navbar-nav {
+      width: 100%;
+      margin-left: -7px !important; }
+      .navbar .navbar-nav .nav-item {
+        margin-left: -2px;
+        font-size: 14px; } }
 
 /*# sourceMappingURL=navigation.css.map */
