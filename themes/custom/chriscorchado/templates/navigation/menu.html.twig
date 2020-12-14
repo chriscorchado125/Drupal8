@@ -51,7 +51,7 @@
 				{% endif %}
 
 				<a href="{{ path('<front>') }}" rel="home" id="logo" class="{{ activeHomeLink }}">
-					<img src="https://chriscorchado.com/images/chriscorchado-initials-logo-animated-spin.gif" id="logo-image" alt="{{ 'Home'|t }}"/>
+					<img src="https://chriscorchado.com/images/chriscorchado-initials-logo-animated-spin.gif" id="logo-image" class="logo-image"  alt="{{ 'Home'|t }}"/>
 				</a>
 
 				{% if items %}
@@ -79,7 +79,7 @@
 					<div class="icon" id="html-resume">
 						<a href="{{subFolder}}/resume">
 
-							<img alt="Link to HTML Resume with PDF and Word options" src="https://chriscorchado.com/images/htmlIcon.jpg"/>
+							<img alt="Link to HTML Resume with PDF and Word options" src="https://chriscorchado.com/images/htmlIcon.jpg" class="resume-link"/>
 							<span>Resume</span>
 						</a>
 					</div>
@@ -131,12 +131,12 @@
 				<label for="search-site">
 					<span class="screen-reader">Enter search term</span>
 					<input type="search" id="search-site" name="search_api" aria-label="Enter search term" aria-required="true"
-						placeholder="Search items" maxlength="128" class="cc-btn search-btn">
+						placeholder="Search items" maxlength="128" class="search-input">
 				</label>
 
 				<label for="search-submit">
 					<span class="screen-reader">Search</span>
-					<button type="submit" id="search-submit" aria-label="Search" class="search-btn" value="Search" role="button">Search</button>
+					<button type="submit" id="search-submit" aria-label="Search" class="search-btn click" value="Search" role="button">Search</button>
 				</label>
 
 				<label for="search-clear-btn">
