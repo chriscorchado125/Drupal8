@@ -23,8 +23,9 @@
   {% elseif 'Courses' in title|render|render %}
     <h1{{ title_attributes }}>{{ title }} and Awards</h1>
 
+  {# TODO: live site uses 'Projects' and dev uses 'Project' #}
   {% elseif 'Project' in title|render|render %}
-    <h1{{ title_attributes }}>{{ title }} Samples</h1>
+    <h1{{ title_attributes }}>Project Samples</h1>
 
   {% elseif 'Contact' in title|render|render %}
     <h1{{ title_attributes }}>{{ title }} Me</h1>
