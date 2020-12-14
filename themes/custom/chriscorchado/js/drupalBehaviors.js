@@ -2,14 +2,18 @@ import { setPagination, setItemCounts } from './itemCount.js';
 import { configureSearchForm } from './search.js';
 import { setNavItem } from './setNavItem.js';
 import { configureContact } from './configureContact.js';
+import { animateLogo } from './animateLogo.js';
 (function ($, Drupal) {
     Drupal.behaviors.chriscorchado = {
         attach: function (context, settings) {
+            setNavItem();
             setPagination();
             setItemCounts();
-            setNavItem();
-            configureSearchForm();
             configureContact();
+            configureSearchForm();
         }
     };
 })(window.jQuery, window.Drupal);
+window.onload = function () {
+    animateLogo('logo-image', '');
+};
