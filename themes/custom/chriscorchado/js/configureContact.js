@@ -1,6 +1,6 @@
+import { getCurrentURL } from './getCurrentURL.js';
 export const configureContact = () => {
-    const emailTextBox = ('label[for="edit-mail"]');
-    if (typeof emailTextBox !== null) {
+    if (getCurrentURL() === 'contact') {
         document.querySelector('label[for="edit-mail"]').innerHTML = 'Email';
         document.getElementById('edit-mail').focus();
     }

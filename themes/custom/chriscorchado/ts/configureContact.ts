@@ -1,10 +1,10 @@
+import { getCurrentURL } from './getCurrentURL.js'
+
 /**
- * Update the email input label text and put cursor inside the textbox
+ * Update the email input label text and put cursor focus inside the email input textbox
  */
 export const configureContact = () => {
-  const emailTextBox = ('label[for="edit-mail"]')
-  /* eslint valid-typeof: "off" */
-  if (typeof emailTextBox !== null) {
+  if (getCurrentURL() === 'contact') {
     document.querySelector('label[for="edit-mail"]').innerHTML = 'Email'
     document.getElementById('edit-mail').focus()
   }
