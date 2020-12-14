@@ -7,10 +7,19 @@ export const getCurrentURL = () => {
 
   const isSearching = currentURL.indexOf('?')
 
+  // currentURLArray[4] is the live /drupal8 directory
   if (isSearching !== -1) {
-    currentURL = currentURLArray[3].split('?')[0]
+    if (currentURLArray[4]) {
+      currentURL = currentURLArray[4].split('?')[0]
+    } else {
+      currentURL = currentURLArray[3].split('?')[0]
+    }
   } else {
-    currentURL = currentURLArray[3]
+    if (currentURLArray[4]) {
+      currentURL = currentURLArray[4]
+    } else {
+      currentURL = currentURLArray[3]
+    }
   }
 
   return currentURL

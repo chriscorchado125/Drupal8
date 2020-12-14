@@ -15,4 +15,3 @@ function highlightSearch(itemToHighlight, searchedFor) {
     }
     return dataToReturn.replace(/&gt;/g, '>').replace(/&lt;/g, '<');
 }
-export { urlParams, highlightSearch };
