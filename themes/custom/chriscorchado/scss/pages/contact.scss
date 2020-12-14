@@ -92,8 +92,8 @@ label {
 // Stack name and email fields
 @media (max-width: 800px) {
   .container {
-    margin-top: 50px;
-    padding: 10px 10px 20px 10px;
+    margin-top: 15px !important;
+    padding: 8px 10px 20px 10px;
 
     #contact-message-feedback-form {
       width: 100%;
@@ -121,13 +121,5 @@ label {
 @media (max-width: 500px) {
   #edit-message-0-value {
     height: 150px;
-  }
-}
-
-@media (max-width: 400px) {
-  .container {
-    h1 {
-      margin: 60px 0 35px 0;
-    }
   }
 }
