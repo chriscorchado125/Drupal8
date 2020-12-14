@@ -17,7 +17,7 @@ import { animateLogo } from './animateLogo.js'
       configureSearchForm()
     }
   }
-})(Query, Drupal)
+})(window.jQuery, window.Drupal)
 
 animateLogo('logo-image', 'spin')
 
