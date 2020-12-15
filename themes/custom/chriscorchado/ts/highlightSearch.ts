@@ -1,7 +1,7 @@
 /**
 * Get querystring values
 */
-const urlParams:any = new URLSearchParams(window.location.search)
+// const urlParams:any = new URLSearchParams(window.location.search)
 
 /**
  * Highlight search term within a string
@@ -9,7 +9,8 @@ const urlParams:any = new URLSearchParams(window.location.search)
  * @param {string} searchedFor - string to search for
  * @return {string} - search result with/without highlight
  */
-function highlightSearch (itemToHighlight: string, searchedFor: string) {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function highlightSearch(itemToHighlight: string, searchedFor: string): string {
   let dataToReturn = itemToHighlight
 
   if (searchedFor) {

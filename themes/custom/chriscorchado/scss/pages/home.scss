@@ -1,9 +1,5 @@
 @import "./../variables.scss";
 
-#logo > img {
-  border: 1px dashed $main_color;
-}
-
 // Homepage is not searchable
 #search-container {
   display: none;
@@ -13,19 +9,25 @@
   pointer-events: none;
 }
 
+ul li {
+  text-align: left !important;
+}
+
 .homepage-wrapper {
   max-width: 1100px;
-  margin: 0px auto 50px auto;
+  margin: 0 auto 50px auto;
   padding: 20px 40px;
 
-  a { color: #658ee7; }
+  a {
+    color: #658ee7;
+  }
 
   p {
     text-align: center;
   }
 
-  ul li{
-    padding:5px;
+  ul li {
+    padding: 5px;
   }
 
   h2 {
@@ -48,7 +50,7 @@
   }
 
   .home-hrclass {
-    background-color: #000000 !important;
+    background-color: #000 !important;
     height: 2px !important;
   }
 
@@ -112,21 +114,22 @@
     display: none;
     padding-top: 10px;
   }
-
-
 }
 
-.jira-versions{
+.jira-versions {
   text-align: center;
-  margin-top:20px;
+  margin-top: 20px;
 
-  img{
-    max-width:185px;
-    box-shadow: 1px 1px 15px 1px #888888;
-    margin:10px;
+  img {
+    max-width: 185px;
+    box-shadow: 1px 1px 15px 1px #888;
+    margin: 10px;
   }
 }
 
+#logo > img {
+  border: 1px dashed $main_color;
+}
 
 @media (max-width: 990px) {
   .site-versions {
@@ -138,7 +141,7 @@
     max-width: 55%;
   }
 
-  .jira-versions img{
+  .jira-versions img {
     max-width: 140px;
   }
 }
@@ -165,21 +168,18 @@
     padding: 0;
   }
 
+  .jira-versions img {
+    max-width: 100px;
+  }
+
   .shadow-version a img {
-    box-shadow: 1px 1px 10px 2px #888888 !important;
+    box-shadow: 1px 1px 10px 2px #888 !important;
   }
 
   .here-hand {
     height: 50px;
   }
-
-  .jira-versions img {
-    max-width: 100px;
-  }
 }
-
-ul li {text-align: left !important;}
-
 
 // SET VERSION image and text: html5, nodejs, vuejs, drupal8, webpack
 #drupal8 {

@@ -5,7 +5,7 @@ const MAX_ITEMS_PER_PAGE = 50
 /**
  * Setup item counts
  */
-export const setItemCounts = () => {
+export const setItemCounts = (): void => {
   let hasPreviousLink = 0
   let hasNextLink = 0
 
@@ -22,7 +22,7 @@ export const setItemCounts = () => {
   // adjust page number - Drupals page numbers are zero indexed so page 0 is 1
   let pageNum = 1
   if (params.get('page')) {
-    pageNum = parseInt(params.get('page')) + 1
+    pageNum = parseInt(params.get('page'), 10) + 1
   }
 
   let searchedFor = ''
@@ -31,7 +31,7 @@ export const setItemCounts = () => {
   }
 
   if (document.getElementById('record-total')) {
-    const count = parseInt(document.getElementById('record-total').innerText)
+    const count = parseInt(document.getElementById('record-total').innerText, 10)
 
     // if there is a next or prev link then show the pagination
     if (hasPreviousLink || hasNextLink) {
@@ -42,7 +42,7 @@ export const setItemCounts = () => {
       if (firstRange === 0) {
         firstRange = 1
       } else {
-        firstRange = firstRange + 1
+        firstRange++
       }
 
       if (count < MAX_ITEMS_PER_PAGE) {
@@ -51,7 +51,7 @@ export const setItemCounts = () => {
 
       // add item counts to the page
       document.getElementById('search-container').className = 'pagination-yes'
-      document.getElementById('search-count').innerHTML = ` Items <span id='total-items'>${firstRange + '-' + lastRange}</span>`
+      document.getElementById('search-count').innerHTML = ` Items <span id='total-items'>${firstRange} - ${lastRange}</span>`
     } else {
       document.getElementById('search-container').className = 'pagination-no'
       document.getElementById('search-count').innerHTML = `<span id='total-items'>${count}</span> ${count === 1 ? 'Item' : 'Items'}`
@@ -65,7 +65,7 @@ export const setItemCounts = () => {
 /**
  * Setup pagination links
  */
-export const setPagination = () => {
+export const setPagination = () :void => {
   const DRUPAL_PAGER = document.querySelectorAll('ul.js-pager__items li a')
   let actualPrevLink = ''
   let actualNextLink = ''

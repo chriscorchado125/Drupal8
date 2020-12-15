@@ -1,7 +1,8 @@
 /**
  * Get the current URL
  */
-export const getCurrentURL = () => {
+// eslint-disable-next-line import/prefer-default-export
+export const getCurrentURL = (): string => {
   let currentURL = window.location.toString()
   const currentURLArray = currentURL.split('/')
 
