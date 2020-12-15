@@ -1,2 +1,4 @@
-# Ignore all HTML files:
+# Ignore all HTML, CSS and JavaScript files:
 *.yml
+*.css
+*.js
