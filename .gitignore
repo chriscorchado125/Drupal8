@@ -57,3 +57,4 @@ libraries/
 modules/
 sites/
 themes/bootstrap/
+node_modules
