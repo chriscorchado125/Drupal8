@@ -116,14 +116,17 @@
 ul li {
   text-align: left !important; }
 
-#drupal8 div .here-hand {
-  display: block;
-  margin: auto; }
-#drupal8 a img {
-  box-shadow: 5px 5px 15px 2px #888 !important; }
-@media (max-width: 600px) {
+#drupal8 {
+  pointer-events: none;
+  cursor: default; }
+  #drupal8 div .here-hand {
+    display: block;
+    margin: auto; }
   #drupal8 a img {
-    box-shadow: 2px 2px 5px 2px #888 !important; } }
+    box-shadow: 5px 5px 15px 2px #888 !important; }
+  @media (max-width: 600px) {
+    #drupal8 a img {
+      box-shadow: 2px 2px 5px 2px #888 !important; } }
 
 #nodejs-text,
 #vuejs-text,
