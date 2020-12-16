@@ -1,15 +1,15 @@
-#logo > img {
-  border: 1px dashed #346adf; }
-
 #search-container {
   display: none; }
 
 .noLink {
   pointer-events: none; }
 
+ul li {
+  text-align: left !important; }
+
 .homepage-wrapper {
   max-width: 1100px;
-  margin: 0px auto 50px auto;
+  margin: 0 auto 50px auto;
   padding: 20px 40px; }
   .homepage-wrapper a {
     color: #658ee7; }
@@ -31,7 +31,7 @@
     text-align: center;
     margin-bottom: 30px; }
   .homepage-wrapper .home-hrclass {
-    background-color: #000000 !important;
+    background-color: #000 !important;
     height: 2px !important; }
   .homepage-wrapper .center {
     text-align: center; }
@@ -78,8 +78,11 @@
   margin-top: 20px; }
   .jira-versions img {
     max-width: 185px;
-    box-shadow: 1px 1px 15px 1px #888888;
+    box-shadow: 1px 1px 15px 1px #888;
     margin: 10px; }
+
+#logo > img {
+  border: 1px dashed #346adf; }
 
 @media (max-width: 990px) {
   .site-versions {
@@ -105,17 +108,14 @@
   .site-versions div {
     padding: 0; }
 
+  .jira-versions img {
+    max-width: 100px; }
+
   .shadow-version a img {
-    box-shadow: 1px 1px 10px 2px #888888 !important; }
+    box-shadow: 1px 1px 10px 2px #888 !important; }
 
   .here-hand {
-    height: 50px; }
-
-  .jira-versions img {
-    max-width: 100px; } }
-ul li {
-  text-align: left !important; }
-
+    height: 50px; } }
 #drupal8 {
   pointer-events: none;
   cursor: default; }
