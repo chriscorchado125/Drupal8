@@ -9,7 +9,7 @@ export const noRecordsFound = (
   noRecordID: string,
   search: string,
   appendToID: string,
-  msg: string,
+  msg: string
 ): void => {
   if (document.getElementById(noRecordID)) {
     document.getElementById(noRecordID).remove()

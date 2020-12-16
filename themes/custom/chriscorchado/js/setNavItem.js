@@ -11,11 +11,15 @@ export const setNavItem = () => {
         case 'project-search':
             navItemToSelect = 'projects';
             break;
+        default:
     }
-    const checkForNavItem = setInterval(function () {
+    const checkForNavItem = setInterval(() => {
         if (document.querySelectorAll(`a[href='/${navItemToSelect}']`)[0]) {
-            document.querySelectorAll(`a[href='/${navItemToSelect}']`)[0].classList.add('nav-item-active');
+            document
+                .querySelectorAll(`a[href='/${navItemToSelect}']`)[0]
+                .classList.add('nav-item-active');
             clearInterval(checkForNavItem);
         }
     }, 100);
 };
+export default setNavItem;

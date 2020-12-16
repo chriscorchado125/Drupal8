@@ -1,5 +1,5 @@
 export const animateLogo = (logoID, animationID) => {
-    const checkExist = setInterval(function () {
+    const checkExist = setInterval(() => {
         const logoElement = document.getElementById(logoID);
         if (logoElement) {
             if (animationID) {

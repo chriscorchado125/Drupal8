@@ -3,9 +3,9 @@ import { configureSearchForm } from './search.js';
 import { setNavItem } from './setNavItem.js';
 import { configureContact } from './configureContact.js';
 import { animateLogo } from './animateLogo.js';
-(function ($, Drupal) {
+(($, Drupal) => {
     Drupal.behaviors.chriscorchado = {
-        attach: function (context, settings) {
+        attach() {
             setNavItem();
             setPagination();
             setItemCounts();
@@ -15,12 +15,12 @@ import { animateLogo } from './animateLogo.js';
     };
 })(window.jQuery, window.Drupal);
 animateLogo('logo-image', 'spin');
-document.addEventListener('click', function (event) {
+document.addEventListener('click', (event) => {
     const itemClasses = event.target.className.toString();
     const validClasses = ['logo-image', 'nav-item', 'search-btn', 'pager-navigation', 'resume-link'];
-    let okToAnimate = validClasses.some(el => itemClasses.includes(el));
+    let okToAnimate = validClasses.some((el) => itemClasses.includes(el));
     const searchButton = ['search-btn click'];
-    const searchClicked = searchButton.some(el => itemClasses.includes(el));
+    const searchClicked = searchButton.some((el) => itemClasses.includes(el));
     const searchValue = document.getElementById('search-site');
     if (searchClicked && searchValue.value === '') {
         okToAnimate = false;
@@ -29,6 +29,6 @@ document.addEventListener('click', function (event) {
         animateLogo('logo-image', 'spin');
     }
 });
-window.onload = function () {
+window.onload = () => {
     animateLogo('logo-image', '');
 };

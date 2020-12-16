@@ -12,14 +12,14 @@ export const setItemCounts = () => {
     const params = new URLSearchParams(document.location.search);
     let pageNum = 1;
     if (params.get('page')) {
-        pageNum = parseInt(params.get('page')) + 1;
+        pageNum = parseInt(params.get('page'), 10) + 1;
     }
     let searchedFor = '';
     if (params.get('search_api')) {
         searchedFor = params.get('search_api');
     }
     if (document.getElementById('record-total')) {
-        const count = parseInt(document.getElementById('record-total').innerText);
+        const count = parseInt(document.getElementById('record-total').innerText, 10);
         if (hasPreviousLink || hasNextLink) {
             let lastRange = pageNum * MAX_ITEMS_PER_PAGE;
             let firstRange = lastRange - MAX_ITEMS_PER_PAGE;
@@ -27,13 +27,13 @@ export const setItemCounts = () => {
                 firstRange = 1;
             }
             else {
-                firstRange = firstRange + 1;
+                firstRange++;
             }
             if (count < MAX_ITEMS_PER_PAGE) {
                 lastRange = (firstRange + count) - 1;
             }
             document.getElementById('search-container').className = 'pagination-yes';
-            document.getElementById('search-count').innerHTML = ` Items <span id='total-items'>${firstRange + '-' + lastRange}</span>`;
+            document.getElementById('search-count').innerHTML = ` Items <span id='total-items'>${firstRange} - ${lastRange}</span>`;
         }
         else {
             document.getElementById('search-container').className = 'pagination-no';

@@ -1,7 +1,8 @@
 /**
 * Get querystring values
 */
-// const urlParams:any = new URLSearchParams(window.location.search)
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const urlParams = new URLSearchParams(window.location.search)
 
 /**
  * Highlight search term within a string
