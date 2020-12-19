@@ -8,28 +8,35 @@ function chriscorchado_preprocess_html(&$variables)
   $path = $current_path = \Drupal::service('path.current')->getPath();
   $alias = \Drupal::service('path.alias_manager')->getAliasByPath($path);
   $pageName = '';
+  $pageDescription = '';
 
   switch ($alias) {
     case '/about-me':
       $pageName = "About Me";
+      $pageDescription = 'Accessibility minded full stack web developer with a graphic design background that enjoys problem solving, learning, ideating and creating';
       break;
     case '/courses':
     case '/award-search':
       $pageName = "Courses and Awards";
+      $pageDescription = 'Courses taken and awards received within the Information Technology field';
       break;
     case '/companies':
     case '/company-search':
       $pageName = "Work History";
+      $pageDescription = 'Work history along with descriptions and screenshots';
       break;
     case '/projects':
     case '/project-search':
       $pageName = "Project Samples";
+      $pageDescription = 'Project samples to showcase some of my programming, design and animation skills';
       break;
     case '/contact/feedback':
       $pageName = "Contact Me";
+      $pageDescription = 'Contact me if you have any question or comments';
       break;
     case '/resume':
       $pageName = "Resume";
+      $pageDescription = 'Resume in HTML format along with PDF and MS Word download options';
       break;
   }
 
@@ -43,7 +50,7 @@ function chriscorchado_preprocess_html(&$variables)
       '#tag' => 'meta',
       '#attributes' => [
         'name' => 'description',
-        'content' => 'Chris Corchado | Portfolio and Resume | ' . $pageName
+        'content' => $pageDescription
       ],
     ];
     $variables['page']['#attached']['html_head'][] = [$description, 'description'];
@@ -53,7 +60,7 @@ function chriscorchado_preprocess_html(&$variables)
       '#tag' => 'meta',
       '#attributes' => [
         'name' => 'keywords',
-        'content' => 'Chris Corchado, Full Stack, Front End, Back End, Website, Web Application, UI, UX, User Interface, User Experience, Architect, Engineer, Programmer, Developer, Designer, Portfolio, Resume'
+        'content' => 'Chris Corchado, Christian Corchado, Full Stack, Front End, Back End, Website, Web Application, UI, UX, User Interface, User Experience, Architect, Engineer, Programmer, Developer, Designer, Portfolio, Resume'
       ],
     ];
     $variables['page']['#attached']['html_head'][] = [$keywords, 'keywords'];
