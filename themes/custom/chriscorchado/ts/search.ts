@@ -93,6 +93,8 @@ export const configureSearchForm = (): void => {
         (<HTMLInputElement>document.getElementById('search-site')).select()
         const currentCount = <HTMLInputElement>document.getElementById('search-count')
 
+        ga('send', 'pageview', `/${clearSearchURL}?q=${params.get('search_api')}`)
+
         if (currentCount.innerText === '0 Items') {
           noRecordsFound('no-records', params.get('search_api'), 'navigation', 'No matches found for')
         }
