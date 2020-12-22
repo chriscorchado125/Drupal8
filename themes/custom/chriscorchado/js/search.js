@@ -53,6 +53,7 @@ export const configureSearchForm = () => {
                 document.getElementById('search-site').value = params.get('search_api');
                 document.getElementById('search-site').select();
                 const currentCount = document.getElementById('search-count');
+                ga('send', 'pageview', `/${clearSearchURL}?q=${params.get('search_api')}`);
                 if (currentCount.innerText === '0 Items') {
                     noRecordsFound('no-records', params.get('search_api'), 'navigation', 'No matches found for');
                 }

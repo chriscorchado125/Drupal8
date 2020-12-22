@@ -51,10 +51,10 @@ export const setItemCounts = (): void => {
 
       // add item counts to the page
       document.getElementById('search-container').className = 'pagination-yes'
-      document.getElementById('search-count').innerHTML = ` Items <span id='total-items'>${firstRange} - ${lastRange}</span>`
+      document.getElementById('search-count').innerHTML = ` Items&nbsp;<span id='total-items'>${firstRange}&nbsp;-&nbsp;${lastRange}</span>`
     } else {
       document.getElementById('search-container').className = 'pagination-no'
-      document.getElementById('search-count').innerHTML = `<span id='total-items'>${count}</span> ${count === 1 ? 'Item' : 'Items'}`
+      document.getElementById('search-count').innerHTML = `<span id='total-items'>${count}</span>&nbsp${count === 1 ? 'Item' : 'Items'}`
     }
   } else {
     document.getElementById('search-count').innerHTML = ' 0 Items'
