@@ -48,16 +48,16 @@ label {
       /* no unit */
       padding: 5px; } }
 @media (max-width: 400px) {
-  #search-site {
-    width: 85px !important; }
-
   #pagination {
-    padding-left: 5px;
-    margin-right: 5px; } }
+    padding-left: 0;
+    /* no unit */
+    margin-right: 2px; } }
 @media (max-width: 350px) {
   #pagination {
-    padding-left: 2px;
-    margin-right: 2px; }
+    padding-left: 0;
+    /* no unit */
+    margin-right: 0;
+    /* no unit */ }
     #pagination .pager-navigation {
       font-size: 11px; } }
 ::-ms-clear {
@@ -93,7 +93,10 @@ label {
     display: inline-block;
     width: 85px; }
   #search-container #search-site {
-    width: 150px; }
+    width: 150px;
+    font-size: 12px;
+    margin-left: 0;
+    /* no unit */ }
   #search-container .search-input {
     padding: 2px;
     font-size: 12px;
@@ -113,14 +116,14 @@ label {
   #search-container {
     float: none;
     width: 100%;
-    margin: -5px 0 10px 0 !important; }
+    margin: 5px auto 8px auto !important; }
 
   #no-records {
     font-size: 30px;
     max-width: 500px; } }
 @media (max-width: 500px) {
   #search-container #search-site {
-    width: 105px; }
+    width: 100px; }
   #search-container #search-btn {
     margin-left: 5px; }
   #search-container #search-count {
@@ -130,20 +133,18 @@ label {
     font-size: 18px;
     max-width: 95%;
     margin-top: 130px; } }
-@media (max-width: 350px) {
+@media (max-width: 400px) {
   #search-container #search-site {
-    width: 95px; }
+    width: 85px !important; } }
+@media (max-width: 350px) {
   #search-container #search-btn {
-    margin-left: 2px;
-    font-size: 11px; }
+    margin-left: 2px; }
   #search-container #search-count {
-    width: 70px;
-    font-size: 11px; } }
-#logo {
-  margin-right: 1rem; }
-  #logo > img {
-    padding: 5px;
-    height: 60px; }
+    width: 65px;
+    margin-right: 1px; } }
+#logo > img {
+  padding: 5px;
+  height: 60px; }
 
 #logo > img:hover {
   border: 1px dashed #346adf; }
@@ -187,7 +188,7 @@ label {
     height: 50px; } }
 @media (max-width: 400px) {
   #logo img {
-    margin: 5px 0 0 10px; }
+    margin: 1px 0 0 12px; }
 
   .navbar {
     padding: 0;

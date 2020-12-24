@@ -51,13 +51,13 @@ export const setItemCounts = (): void => {
 
       // add item counts to the page
       document.getElementById('search-container').className = 'pagination-yes'
-      document.getElementById('search-count').innerHTML = ` Items&nbsp;<span id='total-items'>${firstRange}&nbsp;-&nbsp;${lastRange}</span>`
+      document.getElementById('search-count').innerHTML = `Items&nbsp;<span id='total-items'>${firstRange}-${lastRange}</span>`
     } else {
       document.getElementById('search-container').className = 'pagination-no'
       document.getElementById('search-count').innerHTML = `<span id='total-items'>${count}</span>&nbsp${count === 1 ? 'Item' : 'Items'}`
     }
   } else {
-    document.getElementById('search-count').innerHTML = ' 0 Items'
+    document.getElementById('search-count').innerHTML = '0 Items'
     noRecordsFound('noRecords', searchedFor, 'navigation', 'No matches found for')
   }
 }
@@ -90,7 +90,7 @@ export const setPagination = () :void => {
     : '<span class="pager-navigation disabled" title="There is no next page available" role="button">Next</span>'
 
   if (actualPrevLink.length + actualNextLink.length) {
-    document.getElementById('pagination').innerHTML = prevLink + nextLink
+    document.getElementById('pagination').innerHTML = `${prevLink}&nbsp;${nextLink}`
     // style.display set to block or inline block within the pagination media query
   } else {
     document.getElementById('pagination').innerHTML = ''
