@@ -1,0 +1,6 @@
+name: chriscorchadod8
+recipe: pantheon
+config:
+  framework: drupal8
+  site: chriscorchadod8
+  id: e1d3476f-4d0e-4453-8906-5fbbdd23a830
